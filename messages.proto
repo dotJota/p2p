@@ -1,0 +1,15 @@
+syntax = "proto3";
+package p2pb;
+
+option go_package = "./p2pb";
+
+message testMessage {
+	string sender = 1;
+	string receiver = 2;
+	string text = 3;
+}
+
+message connMessage {
+	int64 sender = 1;
+	int64 offset = 2; // To avoid sending a null message in case sender = 0
+}
