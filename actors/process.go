@@ -8,7 +8,7 @@ import (
 	"google.golang.org/protobuf/proto"
 	"log"
 	"strconv"
-	"time"
+	//"time"
 )
 
 
@@ -47,7 +47,7 @@ func New(pId int, pAddrs []string, pMain string) {
 
 	fmt.Printf("Created process P%d: %s\n", pId, pAddrs[pId])
 	
-	time.Sleep(1000*time.Millisecond)
+	//time.Sleep(1000*time.Millisecond)
 	
 	s := state{id: pId,
 		addrs: pAddrs,
@@ -63,6 +63,8 @@ func New(pId int, pAddrs []string, pMain string) {
 		//sum ++
 		//log.Printf("P%d: Counter %d.\n", s.id, sum)
 		s.onReceive(m)
+		//log.Printf("Received message here!")
+		
 	}
 	
 }
@@ -76,7 +78,7 @@ func (s *state) onReceive(m []byte) {
 	
 	if err != nil {
 		log.Printf("P%d: Failed when unmarshalling message. %d\n", s.id, err)
-		log.Printf("P%d: Received bytes: %d. %d\n", s.id, m)
+		log.Printf("P%d: Received bytes: %d. \n", s.id, m)
 		return
 	}
 	
