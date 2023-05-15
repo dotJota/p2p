@@ -5,9 +5,11 @@ import (
 	//"p2p/p2pb"
 	"net"
 	//"google.golang.org/protobuf/proto"
-	//"time"
-	"strconv"
-	"strings"
+	"time"
+	//"strconv"
+	//"strings"
+	"bufio"
+	"math"
 )
 
 /*
@@ -37,17 +39,19 @@ Received messages are sent to outChannel, the calling process should listen to t
 // addrs[id] is the process' own adress
 type peerConn struct {
 	id  int // Process' own id
-	addrs []string // Internet adresses of peers
-	mainAddr string // Addres of main process
+	addrs map[int]net.UDPAddr // Internet adresses of peers
 	outChan chan []byte // Send messages to process
 	conn *net.UDPConn
 }
 
-func newMailBox(ownId int, peerAddrs []string, mainAddresses string, outChannel chan []byte) peerConn {
+func (pC *peerConn) GetConn() *net.UDPConn {
+	return pC.conn
+}
+
+func NewMailBox(ownId int, peerAddrs map[int]net.UDPAddr, outChannel chan []byte) peerConn {
 
 	pC := peerConn{ id: ownId,
 		addrs: peerAddrs,
-		mainAddr: mainAddresses,
 		outChan: outChannel }
 		
 	//pC.conns = make([]net.Conn, len(peerAddrs))
@@ -57,43 +61,39 @@ func newMailBox(ownId int, peerAddrs []string, mainAddresses string, outChannel 
 }
 
 func (pC *peerConn) SetupConnections() {
-	pC.waitForConnections()
-}
 
-
-func (pC *peerConn) waitForConnections() {
-	
-	address := strings.Split(pC.addrs[pC.id],":")
-	port, err := strconv.Atoi(address[1])
-	addr := net.UDPAddr{
-		Port: port,
-		IP:   net.ParseIP(address[0]),
-        }
-
-	conn, err := net.ListenUDP("udp", &addr)
+	ip := pC.addrs[pC.id]
+	conn, err := net.ListenUDP("udp", &ip)
 	
 	if err != nil {
 		log.Fatalf("P%d: Listening failed. %s\n", pC.id, err)
 	}
-	log.Printf("P%d: Listening to %s.\n", pC.id, pC.addrs[pC.id])
+	log.Printf("P%d: Listening to %s.\n", pC.id, &ip)
 	
 	pC.conn = conn
+	pC.conn.SetReadBuffer(int(math.Pow(2,32)-1))
+	//pC.conn.SetWriteBuffer(int(math.Pow(2,32)-1))
 	go pC.persistentList()
 	
 }
 
 
 func (pC *peerConn) persistentList(){
+	
+	reader := bufio.NewReaderSize(pC.conn,100000)
+	time.Sleep(10000000000)
 
 	for {
-		buf := make([]byte, 128)
-		size, _, err := pC.conn.ReadFromUDP(buf)
+		buf := make([]byte, 20)
+		size, err := reader.Read(buf)
 		
 		if err != nil {
 			log.Printf("P%d: Failed when reading an incoming message. %d\n", pC.id, err)
-			pC.conn.Close()
 			return
 		}
+		
+		//log.Printf("Size: %d \n",size)
+		
 		go func(){pC.outChan <- buf[:size]}()
 	}
 
@@ -104,20 +104,8 @@ func (pC *peerConn) SendMsg(r int, m []byte) {
 	
 	go func(pR int, pM []byte){
 		
-		address := make([]string,2)
-		
-		if r == -1 {
-			address = strings.Split(pC.mainAddr,":")
-		} else {
-			address = strings.Split(pC.addrs[pR],":")
-		}
-		port, err := strconv.Atoi(address[1])
-		addr := net.UDPAddr{
-			Port: port,
-			IP:   net.ParseIP(address[0]),
-		}
-		
-		_, err = pC.conn.WriteToUDP(pM, &addr)
+		ip := pC.addrs[pR]
+		_, err := pC.conn.WriteToUDP(pM, &ip)
 		if err != nil {
 			log.Printf("Response err %v", err)
 		}

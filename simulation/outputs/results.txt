@@ -1,0 +1,23 @@
+Dumping switch connections
+Setting up nodes
+Hello!
+2023/05/15 02:30:42 P0: Listening to 10.0.0.1:5001.
+Finished discovery! Received 31414 messages.
+
+Hello!
+2023/05/15 02:30:42 P1: Listening to 10.0.0.2:5002.
+Finished discovery! Received 20000 messages.
+
+Hello!
+2023/05/15 02:30:42 P2: Listening to 10.0.0.3:5003.
+Finished discovery! Received 20100 messages.
+
+Hello!
+2023/05/15 02:30:42 P3: Listening to 10.0.0.4:5004.
+Finished discovery! Received 20060 messages.
+
+Hello!
+2023/05/15 02:30:42 P4: Listening to 10.0.0.5:5005.
+Finished discovery! Received 14222 messages.
+
+The end

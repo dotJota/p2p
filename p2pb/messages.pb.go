@@ -138,6 +138,61 @@ func (x *ConnMessage) GetOffset() int64 {
 	return 0
 }
 
+type DiscoveryMessage struct {
+	state         protoimpl.MessageState
+	sizeCache     protoimpl.SizeCache
+	unknownFields protoimpl.UnknownFields
+
+	Sender  int32 `protobuf:"varint,1,opt,name=sender,proto3" json:"sender,omitempty"`
+	Attempt int32 `protobuf:"varint,2,opt,name=attempt,proto3" json:"attempt,omitempty"`
+}
+
+func (x *DiscoveryMessage) Reset() {
+	*x = DiscoveryMessage{}
+	if protoimpl.UnsafeEnabled {
+		mi := &file_messages_proto_msgTypes[2]
+		ms := protoimpl.X.MessageStateOf(protoimpl.Pointer(x))
+		ms.StoreMessageInfo(mi)
+	}
+}
+
+func (x *DiscoveryMessage) String() string {
+	return protoimpl.X.MessageStringOf(x)
+}
+
+func (*DiscoveryMessage) ProtoMessage() {}
+
+func (x *DiscoveryMessage) ProtoReflect() protoreflect.Message {
+	mi := &file_messages_proto_msgTypes[2]
+	if protoimpl.UnsafeEnabled && x != nil {
+		ms := protoimpl.X.MessageStateOf(protoimpl.Pointer(x))
+		if ms.LoadMessageInfo() == nil {
+			ms.StoreMessageInfo(mi)
+		}
+		return ms
+	}
+	return mi.MessageOf(x)
+}
+
+// Deprecated: Use DiscoveryMessage.ProtoReflect.Descriptor instead.
+func (*DiscoveryMessage) Descriptor() ([]byte, []int) {
+	return file_messages_proto_rawDescGZIP(), []int{2}
+}
+
+func (x *DiscoveryMessage) GetSender() int32 {
+	if x != nil {
+		return x.Sender
+	}
+	return 0
+}
+
+func (x *DiscoveryMessage) GetAttempt() int32 {
+	if x != nil {
+		return x.Attempt
+	}
+	return 0
+}
+
 var File_messages_proto protoreflect.FileDescriptor
 
 var file_messages_proto_rawDesc = []byte{
@@ -151,8 +206,13 @@ var file_messages_proto_rawDesc = []byte{
 	0x0b, 0x63, 0x6f, 0x6e, 0x6e, 0x4d, 0x65, 0x73, 0x73, 0x61, 0x67, 0x65, 0x12, 0x16, 0x0a, 0x06,
 	0x73, 0x65, 0x6e, 0x64, 0x65, 0x72, 0x18, 0x01, 0x20, 0x01, 0x28, 0x03, 0x52, 0x06, 0x73, 0x65,
 	0x6e, 0x64, 0x65, 0x72, 0x12, 0x16, 0x0a, 0x06, 0x6f, 0x66, 0x66, 0x73, 0x65, 0x74, 0x18, 0x02,
-	0x20, 0x01, 0x28, 0x03, 0x52, 0x06, 0x6f, 0x66, 0x66, 0x73, 0x65, 0x74, 0x42, 0x08, 0x5a, 0x06,
-	0x2e, 0x2f, 0x70, 0x32, 0x70, 0x62, 0x62, 0x06, 0x70, 0x72, 0x6f, 0x74, 0x6f, 0x33,
+	0x20, 0x01, 0x28, 0x03, 0x52, 0x06, 0x6f, 0x66, 0x66, 0x73, 0x65, 0x74, 0x22, 0x44, 0x0a, 0x10,
+	0x64, 0x69, 0x73, 0x63, 0x6f, 0x76, 0x65, 0x72, 0x79, 0x4d, 0x65, 0x73, 0x73, 0x61, 0x67, 0x65,
+	0x12, 0x16, 0x0a, 0x06, 0x73, 0x65, 0x6e, 0x64, 0x65, 0x72, 0x18, 0x01, 0x20, 0x01, 0x28, 0x05,
+	0x52, 0x06, 0x73, 0x65, 0x6e, 0x64, 0x65, 0x72, 0x12, 0x18, 0x0a, 0x07, 0x61, 0x74, 0x74, 0x65,
+	0x6d, 0x70, 0x74, 0x18, 0x02, 0x20, 0x01, 0x28, 0x05, 0x52, 0x07, 0x61, 0x74, 0x74, 0x65, 0x6d,
+	0x70, 0x74, 0x42, 0x08, 0x5a, 0x06, 0x2e, 0x2f, 0x70, 0x32, 0x70, 0x62, 0x62, 0x06, 0x70, 0x72,
+	0x6f, 0x74, 0x6f, 0x33,
 }
 
 var (
@@ -167,10 +227,11 @@ func file_messages_proto_rawDescGZIP() []byte {
 	return file_messages_proto_rawDescData
 }
 
-var file_messages_proto_msgTypes = make([]protoimpl.MessageInfo, 2)
+var file_messages_proto_msgTypes = make([]protoimpl.MessageInfo, 3)
 var file_messages_proto_goTypes = []interface{}{
-	(*TestMessage)(nil), // 0: p2pb.testMessage
-	(*ConnMessage)(nil), // 1: p2pb.connMessage
+	(*TestMessage)(nil),      // 0: p2pb.testMessage
+	(*ConnMessage)(nil),      // 1: p2pb.connMessage
+	(*DiscoveryMessage)(nil), // 2: p2pb.discoveryMessage
 }
 var file_messages_proto_depIdxs = []int32{
 	0, // [0:0] is the sub-list for method output_type
@@ -210,6 +271,18 @@ func file_messages_proto_init() {
 				return nil
 			}
 		}
+		file_messages_proto_msgTypes[2].Exporter = func(v interface{}, i int) interface{} {
+			switch v := v.(*DiscoveryMessage); i {
+			case 0:
+				return &v.state
+			case 1:
+				return &v.sizeCache
+			case 2:
+				return &v.unknownFields
+			default:
+				return nil
+			}
+		}
 	}
 	type x struct{}
 	out := protoimpl.TypeBuilder{
@@ -217,7 +290,7 @@ func file_messages_proto_init() {
 			GoPackagePath: reflect.TypeOf(x{}).PkgPath(),
 			RawDescriptor: file_messages_proto_rawDesc,
 			NumEnums:      0,
-			NumMessages:   2,
+			NumMessages:   3,
 			NumExtensions: 0,
 			NumServices:   0,
 		},

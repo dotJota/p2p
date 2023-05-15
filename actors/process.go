@@ -8,6 +8,7 @@ import (
 	"google.golang.org/protobuf/proto"
 	"log"
 	"strconv"
+	"net"
 	//"time"
 )
 
@@ -16,7 +17,7 @@ import (
 // addrs[id] is the process' own adress
 type state struct {
 	id  int // Process' own id
-	addrs []string // Internet adresses of peers
+	addrs map[int]net.UDPAddr // Internet adresses of peers
 	mainAddr string // Addres of main process
 	myChan chan []byte // Received messages from mailBox
 	mailBox peerConn // Mail box object
@@ -29,7 +30,7 @@ func (s *state) Id() int {
 	return s.id
 }
 
-func (s *state) Addrs() []string {
+func (s *state) Addrs() map[int]net.UDPAddr {
 	return s.addrs
 }
 
@@ -38,7 +39,7 @@ func (s *state) MainAddr() string {
 }
 
 // New process creation
-func New(pId int, pAddrs []string, pMain string) {
+func New(pId int, pAddrs map[int]net.UDPAddr, pMain string) {
 /*
 	pId = Processes' own identifier
 	pAddrs = Processes addresses
@@ -54,7 +55,7 @@ func New(pId int, pAddrs []string, pMain string) {
 		mainAddr: pMain}
 
 	s.myChan = make(chan []byte, 100)
-	s.mailBox = newMailBox(pId, pAddrs, pMain, s.myChan)
+	s.mailBox = NewMailBox(pId, pAddrs, s.myChan)
 	
 	go s.mailBox.SetupConnections()
 	
