@@ -47,7 +47,7 @@ func main() {
 	mail := actors.NewMailBox(*processIndex, addresses, boxChan)
 	mail.SetupConnections()
 	
-	time.Sleep(10000000000)
+	time.Sleep(30000000000)
 	
 	// Sending discovery message
 	msg := &p2pb.DiscoveryMessage{Sender: int32(*processIndex)}
@@ -56,7 +56,7 @@ func main() {
 		fmt.Printf("Error: %s \n", err)
 	}
 	
-	numberMsg := 10000
+	numberMsg := 20
 	for i:=0; i<*numberOfPeers; i++{
 		for j:=0; j<numberMsg; j++{
 			mail.SendMsg(i, eMsg)
@@ -67,7 +67,7 @@ func main() {
 	counter := 0
 	go waitDiscovery(boxChan, *numberOfPeers*numberMsg, waitChan, &counter)
 	select{
-		case <-time.After(50000000000):
+		case <-time.After(100000000000):
 		case <- waitChan:
 	}
 	

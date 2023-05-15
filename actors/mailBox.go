@@ -71,7 +71,7 @@ func (pC *peerConn) SetupConnections() {
 	log.Printf("P%d: Listening to %s.\n", pC.id, &ip)
 	
 	pC.conn = conn
-	pC.conn.SetReadBuffer(int(math.Pow(2,32)-1))
+	pC.conn.SetReadBuffer(int(math.Pow(2,24)-1))
 	//pC.conn.SetWriteBuffer(int(math.Pow(2,32)-1))
 	go pC.persistentList()
 	

@@ -6,12 +6,14 @@ from signal import SIGINT
 from subprocess import call
 import json
 import sys
+import os
                                                                                              
 from mininet.topo import Topo
 from mininet.net import Mininet
 from mininet.util import dumpNodeConnections
 from mininet.log import setLogLevel, info
-from mininet.link import TCLink
+from mininet.link import TCULink
+from mininet.node import Controller, RemoteController
 from mininet.util import pmonitor
 
 class CustomTopo(Topo):
@@ -53,9 +55,24 @@ def connectionTest(nHosts):
 	"Create and test a simple network"
 	topo = CustomTopo(fullTopo)
 	
+	net = Mininet(topo, link=TCULink, build=False, waitConnected=False)
+	net.addController( RemoteController( 'c0', ip='127.0.0.1', port=6633 ))
+	net.build()
+	
 	try:
-		net = Mininet(topo, link=TCLink)
 		net.start()
+		
+		switch = 's0'
+
+		for i in range(1,nHosts+1):
+			cmd = f'ovs-ofctl add-flow {switch} table=0,idle_timeout=60,priority=100,dl_type=0x0800,nw_dst=10.0.0.{i},actions=output:"{switch}-eth{i}"'
+			print(cmd)
+			os.system(cmd)
+			cmd = f'ovs-ofctl add-flow {switch} table=0,idle_timeout=60,priority=100,dl_type=0x0806,nw_dst=10.0.0.{i},actions=output:"{switch}-eth{i}"'
+			print(cmd)
+			os.system(cmd)
+
+		os.system(f"ovs-ofctl dump-flows {switch}")
 		
 		print( "Dumping switch connections" )
 		dumpNodeConnections(net.switches)

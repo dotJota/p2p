@@ -1,23 +1,804 @@
+ovs-ofctl add-flow s0 table=0,idle_timeout=60,priority=100,dl_type=0x0800,nw_dst=10.0.0.1,actions=output:"s0-eth1"
+ovs-ofctl add-flow s0 table=0,idle_timeout=60,priority=100,dl_type=0x0806,nw_dst=10.0.0.1,actions=output:"s0-eth1"
+ovs-ofctl add-flow s0 table=0,idle_timeout=60,priority=100,dl_type=0x0800,nw_dst=10.0.0.2,actions=output:"s0-eth2"
+ovs-ofctl add-flow s0 table=0,idle_timeout=60,priority=100,dl_type=0x0806,nw_dst=10.0.0.2,actions=output:"s0-eth2"
+ovs-ofctl add-flow s0 table=0,idle_timeout=60,priority=100,dl_type=0x0800,nw_dst=10.0.0.3,actions=output:"s0-eth3"
+ovs-ofctl add-flow s0 table=0,idle_timeout=60,priority=100,dl_type=0x0806,nw_dst=10.0.0.3,actions=output:"s0-eth3"
+ovs-ofctl add-flow s0 table=0,idle_timeout=60,priority=100,dl_type=0x0800,nw_dst=10.0.0.4,actions=output:"s0-eth4"
+ovs-ofctl add-flow s0 table=0,idle_timeout=60,priority=100,dl_type=0x0806,nw_dst=10.0.0.4,actions=output:"s0-eth4"
+ovs-ofctl add-flow s0 table=0,idle_timeout=60,priority=100,dl_type=0x0800,nw_dst=10.0.0.5,actions=output:"s0-eth5"
+ovs-ofctl add-flow s0 table=0,idle_timeout=60,priority=100,dl_type=0x0806,nw_dst=10.0.0.5,actions=output:"s0-eth5"
+ovs-ofctl add-flow s0 table=0,idle_timeout=60,priority=100,dl_type=0x0800,nw_dst=10.0.0.6,actions=output:"s0-eth6"
+ovs-ofctl add-flow s0 table=0,idle_timeout=60,priority=100,dl_type=0x0806,nw_dst=10.0.0.6,actions=output:"s0-eth6"
+ovs-ofctl add-flow s0 table=0,idle_timeout=60,priority=100,dl_type=0x0800,nw_dst=10.0.0.7,actions=output:"s0-eth7"
+ovs-ofctl add-flow s0 table=0,idle_timeout=60,priority=100,dl_type=0x0806,nw_dst=10.0.0.7,actions=output:"s0-eth7"
+ovs-ofctl add-flow s0 table=0,idle_timeout=60,priority=100,dl_type=0x0800,nw_dst=10.0.0.8,actions=output:"s0-eth8"
+ovs-ofctl add-flow s0 table=0,idle_timeout=60,priority=100,dl_type=0x0806,nw_dst=10.0.0.8,actions=output:"s0-eth8"
+ovs-ofctl add-flow s0 table=0,idle_timeout=60,priority=100,dl_type=0x0800,nw_dst=10.0.0.9,actions=output:"s0-eth9"
+ovs-ofctl add-flow s0 table=0,idle_timeout=60,priority=100,dl_type=0x0806,nw_dst=10.0.0.9,actions=output:"s0-eth9"
+ovs-ofctl add-flow s0 table=0,idle_timeout=60,priority=100,dl_type=0x0800,nw_dst=10.0.0.10,actions=output:"s0-eth10"
+ovs-ofctl add-flow s0 table=0,idle_timeout=60,priority=100,dl_type=0x0806,nw_dst=10.0.0.10,actions=output:"s0-eth10"
+ovs-ofctl add-flow s0 table=0,idle_timeout=60,priority=100,dl_type=0x0800,nw_dst=10.0.0.11,actions=output:"s0-eth11"
+ovs-ofctl add-flow s0 table=0,idle_timeout=60,priority=100,dl_type=0x0806,nw_dst=10.0.0.11,actions=output:"s0-eth11"
+ovs-ofctl add-flow s0 table=0,idle_timeout=60,priority=100,dl_type=0x0800,nw_dst=10.0.0.12,actions=output:"s0-eth12"
+ovs-ofctl add-flow s0 table=0,idle_timeout=60,priority=100,dl_type=0x0806,nw_dst=10.0.0.12,actions=output:"s0-eth12"
+ovs-ofctl add-flow s0 table=0,idle_timeout=60,priority=100,dl_type=0x0800,nw_dst=10.0.0.13,actions=output:"s0-eth13"
+ovs-ofctl add-flow s0 table=0,idle_timeout=60,priority=100,dl_type=0x0806,nw_dst=10.0.0.13,actions=output:"s0-eth13"
+ovs-ofctl add-flow s0 table=0,idle_timeout=60,priority=100,dl_type=0x0800,nw_dst=10.0.0.14,actions=output:"s0-eth14"
+ovs-ofctl add-flow s0 table=0,idle_timeout=60,priority=100,dl_type=0x0806,nw_dst=10.0.0.14,actions=output:"s0-eth14"
+ovs-ofctl add-flow s0 table=0,idle_timeout=60,priority=100,dl_type=0x0800,nw_dst=10.0.0.15,actions=output:"s0-eth15"
+ovs-ofctl add-flow s0 table=0,idle_timeout=60,priority=100,dl_type=0x0806,nw_dst=10.0.0.15,actions=output:"s0-eth15"
+ovs-ofctl add-flow s0 table=0,idle_timeout=60,priority=100,dl_type=0x0800,nw_dst=10.0.0.16,actions=output:"s0-eth16"
+ovs-ofctl add-flow s0 table=0,idle_timeout=60,priority=100,dl_type=0x0806,nw_dst=10.0.0.16,actions=output:"s0-eth16"
+ovs-ofctl add-flow s0 table=0,idle_timeout=60,priority=100,dl_type=0x0800,nw_dst=10.0.0.17,actions=output:"s0-eth17"
+ovs-ofctl add-flow s0 table=0,idle_timeout=60,priority=100,dl_type=0x0806,nw_dst=10.0.0.17,actions=output:"s0-eth17"
+ovs-ofctl add-flow s0 table=0,idle_timeout=60,priority=100,dl_type=0x0800,nw_dst=10.0.0.18,actions=output:"s0-eth18"
+ovs-ofctl add-flow s0 table=0,idle_timeout=60,priority=100,dl_type=0x0806,nw_dst=10.0.0.18,actions=output:"s0-eth18"
+ovs-ofctl add-flow s0 table=0,idle_timeout=60,priority=100,dl_type=0x0800,nw_dst=10.0.0.19,actions=output:"s0-eth19"
+ovs-ofctl add-flow s0 table=0,idle_timeout=60,priority=100,dl_type=0x0806,nw_dst=10.0.0.19,actions=output:"s0-eth19"
+ovs-ofctl add-flow s0 table=0,idle_timeout=60,priority=100,dl_type=0x0800,nw_dst=10.0.0.20,actions=output:"s0-eth20"
+ovs-ofctl add-flow s0 table=0,idle_timeout=60,priority=100,dl_type=0x0806,nw_dst=10.0.0.20,actions=output:"s0-eth20"
+ovs-ofctl add-flow s0 table=0,idle_timeout=60,priority=100,dl_type=0x0800,nw_dst=10.0.0.21,actions=output:"s0-eth21"
+ovs-ofctl add-flow s0 table=0,idle_timeout=60,priority=100,dl_type=0x0806,nw_dst=10.0.0.21,actions=output:"s0-eth21"
+ovs-ofctl add-flow s0 table=0,idle_timeout=60,priority=100,dl_type=0x0800,nw_dst=10.0.0.22,actions=output:"s0-eth22"
+ovs-ofctl add-flow s0 table=0,idle_timeout=60,priority=100,dl_type=0x0806,nw_dst=10.0.0.22,actions=output:"s0-eth22"
+ovs-ofctl add-flow s0 table=0,idle_timeout=60,priority=100,dl_type=0x0800,nw_dst=10.0.0.23,actions=output:"s0-eth23"
+ovs-ofctl add-flow s0 table=0,idle_timeout=60,priority=100,dl_type=0x0806,nw_dst=10.0.0.23,actions=output:"s0-eth23"
+ovs-ofctl add-flow s0 table=0,idle_timeout=60,priority=100,dl_type=0x0800,nw_dst=10.0.0.24,actions=output:"s0-eth24"
+ovs-ofctl add-flow s0 table=0,idle_timeout=60,priority=100,dl_type=0x0806,nw_dst=10.0.0.24,actions=output:"s0-eth24"
+ovs-ofctl add-flow s0 table=0,idle_timeout=60,priority=100,dl_type=0x0800,nw_dst=10.0.0.25,actions=output:"s0-eth25"
+ovs-ofctl add-flow s0 table=0,idle_timeout=60,priority=100,dl_type=0x0806,nw_dst=10.0.0.25,actions=output:"s0-eth25"
+ovs-ofctl add-flow s0 table=0,idle_timeout=60,priority=100,dl_type=0x0800,nw_dst=10.0.0.26,actions=output:"s0-eth26"
+ovs-ofctl add-flow s0 table=0,idle_timeout=60,priority=100,dl_type=0x0806,nw_dst=10.0.0.26,actions=output:"s0-eth26"
+ovs-ofctl add-flow s0 table=0,idle_timeout=60,priority=100,dl_type=0x0800,nw_dst=10.0.0.27,actions=output:"s0-eth27"
+ovs-ofctl add-flow s0 table=0,idle_timeout=60,priority=100,dl_type=0x0806,nw_dst=10.0.0.27,actions=output:"s0-eth27"
+ovs-ofctl add-flow s0 table=0,idle_timeout=60,priority=100,dl_type=0x0800,nw_dst=10.0.0.28,actions=output:"s0-eth28"
+ovs-ofctl add-flow s0 table=0,idle_timeout=60,priority=100,dl_type=0x0806,nw_dst=10.0.0.28,actions=output:"s0-eth28"
+ovs-ofctl add-flow s0 table=0,idle_timeout=60,priority=100,dl_type=0x0800,nw_dst=10.0.0.29,actions=output:"s0-eth29"
+ovs-ofctl add-flow s0 table=0,idle_timeout=60,priority=100,dl_type=0x0806,nw_dst=10.0.0.29,actions=output:"s0-eth29"
+ovs-ofctl add-flow s0 table=0,idle_timeout=60,priority=100,dl_type=0x0800,nw_dst=10.0.0.30,actions=output:"s0-eth30"
+ovs-ofctl add-flow s0 table=0,idle_timeout=60,priority=100,dl_type=0x0806,nw_dst=10.0.0.30,actions=output:"s0-eth30"
+ovs-ofctl add-flow s0 table=0,idle_timeout=60,priority=100,dl_type=0x0800,nw_dst=10.0.0.31,actions=output:"s0-eth31"
+ovs-ofctl add-flow s0 table=0,idle_timeout=60,priority=100,dl_type=0x0806,nw_dst=10.0.0.31,actions=output:"s0-eth31"
+ovs-ofctl add-flow s0 table=0,idle_timeout=60,priority=100,dl_type=0x0800,nw_dst=10.0.0.32,actions=output:"s0-eth32"
+ovs-ofctl add-flow s0 table=0,idle_timeout=60,priority=100,dl_type=0x0806,nw_dst=10.0.0.32,actions=output:"s0-eth32"
+ovs-ofctl add-flow s0 table=0,idle_timeout=60,priority=100,dl_type=0x0800,nw_dst=10.0.0.33,actions=output:"s0-eth33"
+ovs-ofctl add-flow s0 table=0,idle_timeout=60,priority=100,dl_type=0x0806,nw_dst=10.0.0.33,actions=output:"s0-eth33"
+ovs-ofctl add-flow s0 table=0,idle_timeout=60,priority=100,dl_type=0x0800,nw_dst=10.0.0.34,actions=output:"s0-eth34"
+ovs-ofctl add-flow s0 table=0,idle_timeout=60,priority=100,dl_type=0x0806,nw_dst=10.0.0.34,actions=output:"s0-eth34"
+ovs-ofctl add-flow s0 table=0,idle_timeout=60,priority=100,dl_type=0x0800,nw_dst=10.0.0.35,actions=output:"s0-eth35"
+ovs-ofctl add-flow s0 table=0,idle_timeout=60,priority=100,dl_type=0x0806,nw_dst=10.0.0.35,actions=output:"s0-eth35"
+ovs-ofctl add-flow s0 table=0,idle_timeout=60,priority=100,dl_type=0x0800,nw_dst=10.0.0.36,actions=output:"s0-eth36"
+ovs-ofctl add-flow s0 table=0,idle_timeout=60,priority=100,dl_type=0x0806,nw_dst=10.0.0.36,actions=output:"s0-eth36"
+ovs-ofctl add-flow s0 table=0,idle_timeout=60,priority=100,dl_type=0x0800,nw_dst=10.0.0.37,actions=output:"s0-eth37"
+ovs-ofctl add-flow s0 table=0,idle_timeout=60,priority=100,dl_type=0x0806,nw_dst=10.0.0.37,actions=output:"s0-eth37"
+ovs-ofctl add-flow s0 table=0,idle_timeout=60,priority=100,dl_type=0x0800,nw_dst=10.0.0.38,actions=output:"s0-eth38"
+ovs-ofctl add-flow s0 table=0,idle_timeout=60,priority=100,dl_type=0x0806,nw_dst=10.0.0.38,actions=output:"s0-eth38"
+ovs-ofctl add-flow s0 table=0,idle_timeout=60,priority=100,dl_type=0x0800,nw_dst=10.0.0.39,actions=output:"s0-eth39"
+ovs-ofctl add-flow s0 table=0,idle_timeout=60,priority=100,dl_type=0x0806,nw_dst=10.0.0.39,actions=output:"s0-eth39"
+ovs-ofctl add-flow s0 table=0,idle_timeout=60,priority=100,dl_type=0x0800,nw_dst=10.0.0.40,actions=output:"s0-eth40"
+ovs-ofctl add-flow s0 table=0,idle_timeout=60,priority=100,dl_type=0x0806,nw_dst=10.0.0.40,actions=output:"s0-eth40"
+ovs-ofctl add-flow s0 table=0,idle_timeout=60,priority=100,dl_type=0x0800,nw_dst=10.0.0.41,actions=output:"s0-eth41"
+ovs-ofctl add-flow s0 table=0,idle_timeout=60,priority=100,dl_type=0x0806,nw_dst=10.0.0.41,actions=output:"s0-eth41"
+ovs-ofctl add-flow s0 table=0,idle_timeout=60,priority=100,dl_type=0x0800,nw_dst=10.0.0.42,actions=output:"s0-eth42"
+ovs-ofctl add-flow s0 table=0,idle_timeout=60,priority=100,dl_type=0x0806,nw_dst=10.0.0.42,actions=output:"s0-eth42"
+ovs-ofctl add-flow s0 table=0,idle_timeout=60,priority=100,dl_type=0x0800,nw_dst=10.0.0.43,actions=output:"s0-eth43"
+ovs-ofctl add-flow s0 table=0,idle_timeout=60,priority=100,dl_type=0x0806,nw_dst=10.0.0.43,actions=output:"s0-eth43"
+ovs-ofctl add-flow s0 table=0,idle_timeout=60,priority=100,dl_type=0x0800,nw_dst=10.0.0.44,actions=output:"s0-eth44"
+ovs-ofctl add-flow s0 table=0,idle_timeout=60,priority=100,dl_type=0x0806,nw_dst=10.0.0.44,actions=output:"s0-eth44"
+ovs-ofctl add-flow s0 table=0,idle_timeout=60,priority=100,dl_type=0x0800,nw_dst=10.0.0.45,actions=output:"s0-eth45"
+ovs-ofctl add-flow s0 table=0,idle_timeout=60,priority=100,dl_type=0x0806,nw_dst=10.0.0.45,actions=output:"s0-eth45"
+ovs-ofctl add-flow s0 table=0,idle_timeout=60,priority=100,dl_type=0x0800,nw_dst=10.0.0.46,actions=output:"s0-eth46"
+ovs-ofctl add-flow s0 table=0,idle_timeout=60,priority=100,dl_type=0x0806,nw_dst=10.0.0.46,actions=output:"s0-eth46"
+ovs-ofctl add-flow s0 table=0,idle_timeout=60,priority=100,dl_type=0x0800,nw_dst=10.0.0.47,actions=output:"s0-eth47"
+ovs-ofctl add-flow s0 table=0,idle_timeout=60,priority=100,dl_type=0x0806,nw_dst=10.0.0.47,actions=output:"s0-eth47"
+ovs-ofctl add-flow s0 table=0,idle_timeout=60,priority=100,dl_type=0x0800,nw_dst=10.0.0.48,actions=output:"s0-eth48"
+ovs-ofctl add-flow s0 table=0,idle_timeout=60,priority=100,dl_type=0x0806,nw_dst=10.0.0.48,actions=output:"s0-eth48"
+ovs-ofctl add-flow s0 table=0,idle_timeout=60,priority=100,dl_type=0x0800,nw_dst=10.0.0.49,actions=output:"s0-eth49"
+ovs-ofctl add-flow s0 table=0,idle_timeout=60,priority=100,dl_type=0x0806,nw_dst=10.0.0.49,actions=output:"s0-eth49"
+ovs-ofctl add-flow s0 table=0,idle_timeout=60,priority=100,dl_type=0x0800,nw_dst=10.0.0.50,actions=output:"s0-eth50"
+ovs-ofctl add-flow s0 table=0,idle_timeout=60,priority=100,dl_type=0x0806,nw_dst=10.0.0.50,actions=output:"s0-eth50"
+ovs-ofctl add-flow s0 table=0,idle_timeout=60,priority=100,dl_type=0x0800,nw_dst=10.0.0.51,actions=output:"s0-eth51"
+ovs-ofctl add-flow s0 table=0,idle_timeout=60,priority=100,dl_type=0x0806,nw_dst=10.0.0.51,actions=output:"s0-eth51"
+ovs-ofctl add-flow s0 table=0,idle_timeout=60,priority=100,dl_type=0x0800,nw_dst=10.0.0.52,actions=output:"s0-eth52"
+ovs-ofctl add-flow s0 table=0,idle_timeout=60,priority=100,dl_type=0x0806,nw_dst=10.0.0.52,actions=output:"s0-eth52"
+ovs-ofctl add-flow s0 table=0,idle_timeout=60,priority=100,dl_type=0x0800,nw_dst=10.0.0.53,actions=output:"s0-eth53"
+ovs-ofctl add-flow s0 table=0,idle_timeout=60,priority=100,dl_type=0x0806,nw_dst=10.0.0.53,actions=output:"s0-eth53"
+ovs-ofctl add-flow s0 table=0,idle_timeout=60,priority=100,dl_type=0x0800,nw_dst=10.0.0.54,actions=output:"s0-eth54"
+ovs-ofctl add-flow s0 table=0,idle_timeout=60,priority=100,dl_type=0x0806,nw_dst=10.0.0.54,actions=output:"s0-eth54"
+ovs-ofctl add-flow s0 table=0,idle_timeout=60,priority=100,dl_type=0x0800,nw_dst=10.0.0.55,actions=output:"s0-eth55"
+ovs-ofctl add-flow s0 table=0,idle_timeout=60,priority=100,dl_type=0x0806,nw_dst=10.0.0.55,actions=output:"s0-eth55"
+ovs-ofctl add-flow s0 table=0,idle_timeout=60,priority=100,dl_type=0x0800,nw_dst=10.0.0.56,actions=output:"s0-eth56"
+ovs-ofctl add-flow s0 table=0,idle_timeout=60,priority=100,dl_type=0x0806,nw_dst=10.0.0.56,actions=output:"s0-eth56"
+ovs-ofctl add-flow s0 table=0,idle_timeout=60,priority=100,dl_type=0x0800,nw_dst=10.0.0.57,actions=output:"s0-eth57"
+ovs-ofctl add-flow s0 table=0,idle_timeout=60,priority=100,dl_type=0x0806,nw_dst=10.0.0.57,actions=output:"s0-eth57"
+ovs-ofctl add-flow s0 table=0,idle_timeout=60,priority=100,dl_type=0x0800,nw_dst=10.0.0.58,actions=output:"s0-eth58"
+ovs-ofctl add-flow s0 table=0,idle_timeout=60,priority=100,dl_type=0x0806,nw_dst=10.0.0.58,actions=output:"s0-eth58"
+ovs-ofctl add-flow s0 table=0,idle_timeout=60,priority=100,dl_type=0x0800,nw_dst=10.0.0.59,actions=output:"s0-eth59"
+ovs-ofctl add-flow s0 table=0,idle_timeout=60,priority=100,dl_type=0x0806,nw_dst=10.0.0.59,actions=output:"s0-eth59"
+ovs-ofctl add-flow s0 table=0,idle_timeout=60,priority=100,dl_type=0x0800,nw_dst=10.0.0.60,actions=output:"s0-eth60"
+ovs-ofctl add-flow s0 table=0,idle_timeout=60,priority=100,dl_type=0x0806,nw_dst=10.0.0.60,actions=output:"s0-eth60"
+ovs-ofctl add-flow s0 table=0,idle_timeout=60,priority=100,dl_type=0x0800,nw_dst=10.0.0.61,actions=output:"s0-eth61"
+ovs-ofctl add-flow s0 table=0,idle_timeout=60,priority=100,dl_type=0x0806,nw_dst=10.0.0.61,actions=output:"s0-eth61"
+ovs-ofctl add-flow s0 table=0,idle_timeout=60,priority=100,dl_type=0x0800,nw_dst=10.0.0.62,actions=output:"s0-eth62"
+ovs-ofctl add-flow s0 table=0,idle_timeout=60,priority=100,dl_type=0x0806,nw_dst=10.0.0.62,actions=output:"s0-eth62"
+ovs-ofctl add-flow s0 table=0,idle_timeout=60,priority=100,dl_type=0x0800,nw_dst=10.0.0.63,actions=output:"s0-eth63"
+ovs-ofctl add-flow s0 table=0,idle_timeout=60,priority=100,dl_type=0x0806,nw_dst=10.0.0.63,actions=output:"s0-eth63"
+ovs-ofctl add-flow s0 table=0,idle_timeout=60,priority=100,dl_type=0x0800,nw_dst=10.0.0.64,actions=output:"s0-eth64"
+ovs-ofctl add-flow s0 table=0,idle_timeout=60,priority=100,dl_type=0x0806,nw_dst=10.0.0.64,actions=output:"s0-eth64"
+ovs-ofctl add-flow s0 table=0,idle_timeout=60,priority=100,dl_type=0x0800,nw_dst=10.0.0.65,actions=output:"s0-eth65"
+ovs-ofctl add-flow s0 table=0,idle_timeout=60,priority=100,dl_type=0x0806,nw_dst=10.0.0.65,actions=output:"s0-eth65"
+ovs-ofctl add-flow s0 table=0,idle_timeout=60,priority=100,dl_type=0x0800,nw_dst=10.0.0.66,actions=output:"s0-eth66"
+ovs-ofctl add-flow s0 table=0,idle_timeout=60,priority=100,dl_type=0x0806,nw_dst=10.0.0.66,actions=output:"s0-eth66"
+ovs-ofctl add-flow s0 table=0,idle_timeout=60,priority=100,dl_type=0x0800,nw_dst=10.0.0.67,actions=output:"s0-eth67"
+ovs-ofctl add-flow s0 table=0,idle_timeout=60,priority=100,dl_type=0x0806,nw_dst=10.0.0.67,actions=output:"s0-eth67"
+ovs-ofctl add-flow s0 table=0,idle_timeout=60,priority=100,dl_type=0x0800,nw_dst=10.0.0.68,actions=output:"s0-eth68"
+ovs-ofctl add-flow s0 table=0,idle_timeout=60,priority=100,dl_type=0x0806,nw_dst=10.0.0.68,actions=output:"s0-eth68"
+ovs-ofctl add-flow s0 table=0,idle_timeout=60,priority=100,dl_type=0x0800,nw_dst=10.0.0.69,actions=output:"s0-eth69"
+ovs-ofctl add-flow s0 table=0,idle_timeout=60,priority=100,dl_type=0x0806,nw_dst=10.0.0.69,actions=output:"s0-eth69"
+ovs-ofctl add-flow s0 table=0,idle_timeout=60,priority=100,dl_type=0x0800,nw_dst=10.0.0.70,actions=output:"s0-eth70"
+ovs-ofctl add-flow s0 table=0,idle_timeout=60,priority=100,dl_type=0x0806,nw_dst=10.0.0.70,actions=output:"s0-eth70"
+NXST_FLOW reply (xid=0x4):
+ cookie=0x0, duration=0.533s, table=0, n_packets=0, n_bytes=0, idle_timeout=60, idle_age=0, priority=100,ip,nw_dst=10.0.0.1 actions=output:1
+ cookie=0x0, duration=0.531s, table=0, n_packets=0, n_bytes=0, idle_timeout=60, idle_age=0, priority=100,arp,arp_tpa=10.0.0.1 actions=output:1
+ cookie=0x0, duration=0.514s, table=0, n_packets=0, n_bytes=0, idle_timeout=60, idle_age=0, priority=100,ip,nw_dst=10.0.0.2 actions=output:2
+ cookie=0x0, duration=0.513s, table=0, n_packets=0, n_bytes=0, idle_timeout=60, idle_age=0, priority=100,arp,arp_tpa=10.0.0.2 actions=output:2
+ cookie=0x0, duration=0.511s, table=0, n_packets=0, n_bytes=0, idle_timeout=60, idle_age=0, priority=100,ip,nw_dst=10.0.0.3 actions=output:3
+ cookie=0x0, duration=0.509s, table=0, n_packets=0, n_bytes=0, idle_timeout=60, idle_age=0, priority=100,arp,arp_tpa=10.0.0.3 actions=output:3
+ cookie=0x0, duration=0.507s, table=0, n_packets=0, n_bytes=0, idle_timeout=60, idle_age=0, priority=100,ip,nw_dst=10.0.0.4 actions=output:4
+ cookie=0x0, duration=0.506s, table=0, n_packets=0, n_bytes=0, idle_timeout=60, idle_age=0, priority=100,arp,arp_tpa=10.0.0.4 actions=output:4
+ cookie=0x0, duration=0.504s, table=0, n_packets=0, n_bytes=0, idle_timeout=60, idle_age=0, priority=100,ip,nw_dst=10.0.0.5 actions=output:5
+ cookie=0x0, duration=0.503s, table=0, n_packets=0, n_bytes=0, idle_timeout=60, idle_age=0, priority=100,arp,arp_tpa=10.0.0.5 actions=output:5
+ cookie=0x0, duration=0.501s, table=0, n_packets=0, n_bytes=0, idle_timeout=60, idle_age=0, priority=100,ip,nw_dst=10.0.0.6 actions=output:6
+ cookie=0x0, duration=0.500s, table=0, n_packets=0, n_bytes=0, idle_timeout=60, idle_age=0, priority=100,arp,arp_tpa=10.0.0.6 actions=output:6
+ cookie=0x0, duration=0.498s, table=0, n_packets=0, n_bytes=0, idle_timeout=60, idle_age=0, priority=100,ip,nw_dst=10.0.0.7 actions=output:7
+ cookie=0x0, duration=0.497s, table=0, n_packets=0, n_bytes=0, idle_timeout=60, idle_age=0, priority=100,arp,arp_tpa=10.0.0.7 actions=output:7
+ cookie=0x0, duration=0.495s, table=0, n_packets=0, n_bytes=0, idle_timeout=60, idle_age=0, priority=100,ip,nw_dst=10.0.0.8 actions=output:8
+ cookie=0x0, duration=0.494s, table=0, n_packets=0, n_bytes=0, idle_timeout=60, idle_age=0, priority=100,arp,arp_tpa=10.0.0.8 actions=output:8
+ cookie=0x0, duration=0.492s, table=0, n_packets=0, n_bytes=0, idle_timeout=60, idle_age=0, priority=100,ip,nw_dst=10.0.0.9 actions=output:9
+ cookie=0x0, duration=0.491s, table=0, n_packets=0, n_bytes=0, idle_timeout=60, idle_age=0, priority=100,arp,arp_tpa=10.0.0.9 actions=output:9
+ cookie=0x0, duration=0.489s, table=0, n_packets=0, n_bytes=0, idle_timeout=60, idle_age=0, priority=100,ip,nw_dst=10.0.0.10 actions=output:10
+ cookie=0x0, duration=0.488s, table=0, n_packets=0, n_bytes=0, idle_timeout=60, idle_age=0, priority=100,arp,arp_tpa=10.0.0.10 actions=output:10
+ cookie=0x0, duration=0.486s, table=0, n_packets=0, n_bytes=0, idle_timeout=60, idle_age=0, priority=100,ip,nw_dst=10.0.0.11 actions=output:11
+ cookie=0x0, duration=0.485s, table=0, n_packets=0, n_bytes=0, idle_timeout=60, idle_age=0, priority=100,arp,arp_tpa=10.0.0.11 actions=output:11
+ cookie=0x0, duration=0.483s, table=0, n_packets=0, n_bytes=0, idle_timeout=60, idle_age=0, priority=100,ip,nw_dst=10.0.0.12 actions=output:12
+ cookie=0x0, duration=0.482s, table=0, n_packets=0, n_bytes=0, idle_timeout=60, idle_age=0, priority=100,arp,arp_tpa=10.0.0.12 actions=output:12
+ cookie=0x0, duration=0.480s, table=0, n_packets=0, n_bytes=0, idle_timeout=60, idle_age=0, priority=100,ip,nw_dst=10.0.0.13 actions=output:13
+ cookie=0x0, duration=0.479s, table=0, n_packets=0, n_bytes=0, idle_timeout=60, idle_age=0, priority=100,arp,arp_tpa=10.0.0.13 actions=output:13
+ cookie=0x0, duration=0.477s, table=0, n_packets=0, n_bytes=0, idle_timeout=60, idle_age=0, priority=100,ip,nw_dst=10.0.0.14 actions=output:14
+ cookie=0x0, duration=0.476s, table=0, n_packets=0, n_bytes=0, idle_timeout=60, idle_age=0, priority=100,arp,arp_tpa=10.0.0.14 actions=output:14
+ cookie=0x0, duration=0.474s, table=0, n_packets=0, n_bytes=0, idle_timeout=60, idle_age=0, priority=100,ip,nw_dst=10.0.0.15 actions=output:15
+ cookie=0x0, duration=0.473s, table=0, n_packets=0, n_bytes=0, idle_timeout=60, idle_age=0, priority=100,arp,arp_tpa=10.0.0.15 actions=output:15
+ cookie=0x0, duration=0.471s, table=0, n_packets=0, n_bytes=0, idle_timeout=60, idle_age=0, priority=100,ip,nw_dst=10.0.0.16 actions=output:16
+ cookie=0x0, duration=0.470s, table=0, n_packets=0, n_bytes=0, idle_timeout=60, idle_age=0, priority=100,arp,arp_tpa=10.0.0.16 actions=output:16
+ cookie=0x0, duration=0.468s, table=0, n_packets=0, n_bytes=0, idle_timeout=60, idle_age=0, priority=100,ip,nw_dst=10.0.0.17 actions=output:17
+ cookie=0x0, duration=0.467s, table=0, n_packets=0, n_bytes=0, idle_timeout=60, idle_age=0, priority=100,arp,arp_tpa=10.0.0.17 actions=output:17
+ cookie=0x0, duration=0.465s, table=0, n_packets=0, n_bytes=0, idle_timeout=60, idle_age=0, priority=100,ip,nw_dst=10.0.0.18 actions=output:18
+ cookie=0x0, duration=0.463s, table=0, n_packets=0, n_bytes=0, idle_timeout=60, idle_age=0, priority=100,arp,arp_tpa=10.0.0.18 actions=output:18
+ cookie=0x0, duration=0.440s, table=0, n_packets=0, n_bytes=0, idle_timeout=60, idle_age=0, priority=100,ip,nw_dst=10.0.0.19 actions=output:19
+ cookie=0x0, duration=0.438s, table=0, n_packets=0, n_bytes=0, idle_timeout=60, idle_age=0, priority=100,arp,arp_tpa=10.0.0.19 actions=output:19
+ cookie=0x0, duration=0.437s, table=0, n_packets=0, n_bytes=0, idle_timeout=60, idle_age=0, priority=100,ip,nw_dst=10.0.0.20 actions=output:20
+ cookie=0x0, duration=0.435s, table=0, n_packets=0, n_bytes=0, idle_timeout=60, idle_age=0, priority=100,arp,arp_tpa=10.0.0.20 actions=output:20
+ cookie=0x0, duration=0.434s, table=0, n_packets=0, n_bytes=0, idle_timeout=60, idle_age=0, priority=100,ip,nw_dst=10.0.0.21 actions=output:21
+ cookie=0x0, duration=0.432s, table=0, n_packets=0, n_bytes=0, idle_timeout=60, idle_age=0, priority=100,arp,arp_tpa=10.0.0.21 actions=output:21
+ cookie=0x0, duration=0.431s, table=0, n_packets=0, n_bytes=0, idle_timeout=60, idle_age=0, priority=100,ip,nw_dst=10.0.0.22 actions=output:22
+ cookie=0x0, duration=0.429s, table=0, n_packets=0, n_bytes=0, idle_timeout=60, idle_age=0, priority=100,arp,arp_tpa=10.0.0.22 actions=output:22
+ cookie=0x0, duration=0.427s, table=0, n_packets=0, n_bytes=0, idle_timeout=60, idle_age=0, priority=100,ip,nw_dst=10.0.0.23 actions=output:23
+ cookie=0x0, duration=0.426s, table=0, n_packets=0, n_bytes=0, idle_timeout=60, idle_age=0, priority=100,arp,arp_tpa=10.0.0.23 actions=output:23
+ cookie=0x0, duration=0.424s, table=0, n_packets=0, n_bytes=0, idle_timeout=60, idle_age=0, priority=100,ip,nw_dst=10.0.0.24 actions=output:24
+ cookie=0x0, duration=0.423s, table=0, n_packets=0, n_bytes=0, idle_timeout=60, idle_age=0, priority=100,arp,arp_tpa=10.0.0.24 actions=output:24
+ cookie=0x0, duration=0.421s, table=0, n_packets=0, n_bytes=0, idle_timeout=60, idle_age=0, priority=100,ip,nw_dst=10.0.0.25 actions=output:25
+ cookie=0x0, duration=0.420s, table=0, n_packets=0, n_bytes=0, idle_timeout=60, idle_age=0, priority=100,arp,arp_tpa=10.0.0.25 actions=output:25
+ cookie=0x0, duration=0.418s, table=0, n_packets=0, n_bytes=0, idle_timeout=60, idle_age=0, priority=100,ip,nw_dst=10.0.0.26 actions=output:26
+ cookie=0x0, duration=0.417s, table=0, n_packets=0, n_bytes=0, idle_timeout=60, idle_age=0, priority=100,arp,arp_tpa=10.0.0.26 actions=output:26
+ cookie=0x0, duration=0.415s, table=0, n_packets=0, n_bytes=0, idle_timeout=60, idle_age=0, priority=100,ip,nw_dst=10.0.0.27 actions=output:27
+ cookie=0x0, duration=0.414s, table=0, n_packets=0, n_bytes=0, idle_timeout=60, idle_age=0, priority=100,arp,arp_tpa=10.0.0.27 actions=output:27
+ cookie=0x0, duration=0.412s, table=0, n_packets=0, n_bytes=0, idle_timeout=60, idle_age=0, priority=100,ip,nw_dst=10.0.0.28 actions=output:28
+ cookie=0x0, duration=0.410s, table=0, n_packets=0, n_bytes=0, idle_timeout=60, idle_age=0, priority=100,arp,arp_tpa=10.0.0.28 actions=output:28
+ cookie=0x0, duration=0.409s, table=0, n_packets=0, n_bytes=0, idle_timeout=60, idle_age=0, priority=100,ip,nw_dst=10.0.0.29 actions=output:29
+ cookie=0x0, duration=0.407s, table=0, n_packets=0, n_bytes=0, idle_timeout=60, idle_age=0, priority=100,arp,arp_tpa=10.0.0.29 actions=output:29
+ cookie=0x0, duration=0.406s, table=0, n_packets=0, n_bytes=0, idle_timeout=60, idle_age=0, priority=100,ip,nw_dst=10.0.0.30 actions=output:30
+ cookie=0x0, duration=0.404s, table=0, n_packets=0, n_bytes=0, idle_timeout=60, idle_age=0, priority=100,arp,arp_tpa=10.0.0.30 actions=output:30
+ cookie=0x0, duration=0.402s, table=0, n_packets=0, n_bytes=0, idle_timeout=60, idle_age=0, priority=100,ip,nw_dst=10.0.0.31 actions=output:31
+ cookie=0x0, duration=0.401s, table=0, n_packets=0, n_bytes=0, idle_timeout=60, idle_age=0, priority=100,arp,arp_tpa=10.0.0.31 actions=output:31
+ cookie=0x0, duration=0.399s, table=0, n_packets=0, n_bytes=0, idle_timeout=60, idle_age=0, priority=100,ip,nw_dst=10.0.0.32 actions=output:32
+ cookie=0x0, duration=0.382s, table=0, n_packets=0, n_bytes=0, idle_timeout=60, idle_age=0, priority=100,arp,arp_tpa=10.0.0.32 actions=output:32
+ cookie=0x0, duration=0.380s, table=0, n_packets=0, n_bytes=0, idle_timeout=60, idle_age=0, priority=100,ip,nw_dst=10.0.0.33 actions=output:33
+ cookie=0x0, duration=0.379s, table=0, n_packets=0, n_bytes=0, idle_timeout=60, idle_age=0, priority=100,arp,arp_tpa=10.0.0.33 actions=output:33
+ cookie=0x0, duration=0.377s, table=0, n_packets=0, n_bytes=0, idle_timeout=60, idle_age=0, priority=100,ip,nw_dst=10.0.0.34 actions=output:34
+ cookie=0x0, duration=0.376s, table=0, n_packets=0, n_bytes=0, idle_timeout=60, idle_age=0, priority=100,arp,arp_tpa=10.0.0.34 actions=output:34
+ cookie=0x0, duration=0.374s, table=0, n_packets=0, n_bytes=0, idle_timeout=60, idle_age=0, priority=100,ip,nw_dst=10.0.0.35 actions=output:35
+ cookie=0x0, duration=0.373s, table=0, n_packets=0, n_bytes=0, idle_timeout=60, idle_age=0, priority=100,arp,arp_tpa=10.0.0.35 actions=output:35
+ cookie=0x0, duration=0.371s, table=0, n_packets=0, n_bytes=0, idle_timeout=60, idle_age=0, priority=100,ip,nw_dst=10.0.0.36 actions=output:36
+ cookie=0x0, duration=0.370s, table=0, n_packets=0, n_bytes=0, idle_timeout=60, idle_age=0, priority=100,arp,arp_tpa=10.0.0.36 actions=output:36
+ cookie=0x0, duration=0.368s, table=0, n_packets=0, n_bytes=0, idle_timeout=60, idle_age=0, priority=100,ip,nw_dst=10.0.0.37 actions=output:37
+ cookie=0x0, duration=0.366s, table=0, n_packets=0, n_bytes=0, idle_timeout=60, idle_age=0, priority=100,arp,arp_tpa=10.0.0.37 actions=output:37
+ cookie=0x0, duration=0.365s, table=0, n_packets=0, n_bytes=0, idle_timeout=60, idle_age=0, priority=100,ip,nw_dst=10.0.0.38 actions=output:38
+ cookie=0x0, duration=0.363s, table=0, n_packets=0, n_bytes=0, idle_timeout=60, idle_age=0, priority=100,arp,arp_tpa=10.0.0.38 actions=output:38
+ cookie=0x0, duration=0.362s, table=0, n_packets=0, n_bytes=0, idle_timeout=60, idle_age=0, priority=100,ip,nw_dst=10.0.0.39 actions=output:39
+ cookie=0x0, duration=0.360s, table=0, n_packets=0, n_bytes=0, idle_timeout=60, idle_age=0, priority=100,arp,arp_tpa=10.0.0.39 actions=output:39
+ cookie=0x0, duration=0.359s, table=0, n_packets=0, n_bytes=0, idle_timeout=60, idle_age=0, priority=100,ip,nw_dst=10.0.0.40 actions=output:40
+ cookie=0x0, duration=0.357s, table=0, n_packets=0, n_bytes=0, idle_timeout=60, idle_age=0, priority=100,arp,arp_tpa=10.0.0.40 actions=output:40
+ cookie=0x0, duration=0.356s, table=0, n_packets=0, n_bytes=0, idle_timeout=60, idle_age=0, priority=100,ip,nw_dst=10.0.0.41 actions=output:41
+ cookie=0x0, duration=0.354s, table=0, n_packets=0, n_bytes=0, idle_timeout=60, idle_age=0, priority=100,arp,arp_tpa=10.0.0.41 actions=output:41
+ cookie=0x0, duration=0.353s, table=0, n_packets=0, n_bytes=0, idle_timeout=60, idle_age=0, priority=100,ip,nw_dst=10.0.0.42 actions=output:42
+ cookie=0x0, duration=0.351s, table=0, n_packets=0, n_bytes=0, idle_timeout=60, idle_age=0, priority=100,arp,arp_tpa=10.0.0.42 actions=output:42
+ cookie=0x0, duration=0.349s, table=0, n_packets=0, n_bytes=0, idle_timeout=60, idle_age=0, priority=100,ip,nw_dst=10.0.0.43 actions=output:43
+ cookie=0x0, duration=0.348s, table=0, n_packets=0, n_bytes=0, idle_timeout=60, idle_age=0, priority=100,arp,arp_tpa=10.0.0.43 actions=output:43
+ cookie=0x0, duration=0.346s, table=0, n_packets=0, n_bytes=0, idle_timeout=60, idle_age=0, priority=100,ip,nw_dst=10.0.0.44 actions=output:44
+ cookie=0x0, duration=0.345s, table=0, n_packets=0, n_bytes=0, idle_timeout=60, idle_age=0, priority=100,arp,arp_tpa=10.0.0.44 actions=output:44
+ cookie=0x0, duration=0.343s, table=0, n_packets=0, n_bytes=0, idle_timeout=60, idle_age=0, priority=100,ip,nw_dst=10.0.0.45 actions=output:45
+ cookie=0x0, duration=0.342s, table=0, n_packets=0, n_bytes=0, idle_timeout=60, idle_age=0, priority=100,arp,arp_tpa=10.0.0.45 actions=output:45
+ cookie=0x0, duration=0.340s, table=0, n_packets=0, n_bytes=0, idle_timeout=60, idle_age=0, priority=100,ip,nw_dst=10.0.0.46 actions=output:46
+ cookie=0x0, duration=0.339s, table=0, n_packets=0, n_bytes=0, idle_timeout=60, idle_age=0, priority=100,arp,arp_tpa=10.0.0.46 actions=output:46
+ cookie=0x0, duration=0.337s, table=0, n_packets=0, n_bytes=0, idle_timeout=60, idle_age=0, priority=100,ip,nw_dst=10.0.0.47 actions=output:47
+ cookie=0x0, duration=0.336s, table=0, n_packets=0, n_bytes=0, idle_timeout=60, idle_age=0, priority=100,arp,arp_tpa=10.0.0.47 actions=output:47
+ cookie=0x0, duration=0.321s, table=0, n_packets=0, n_bytes=0, idle_timeout=60, idle_age=0, priority=100,ip,nw_dst=10.0.0.48 actions=output:48
+ cookie=0x0, duration=0.319s, table=0, n_packets=0, n_bytes=0, idle_timeout=60, idle_age=0, priority=100,arp,arp_tpa=10.0.0.48 actions=output:48
+ cookie=0x0, duration=0.317s, table=0, n_packets=0, n_bytes=0, idle_timeout=60, idle_age=0, priority=100,ip,nw_dst=10.0.0.49 actions=output:49
+ cookie=0x0, duration=0.316s, table=0, n_packets=0, n_bytes=0, idle_timeout=60, idle_age=0, priority=100,arp,arp_tpa=10.0.0.49 actions=output:49
+ cookie=0x0, duration=0.314s, table=0, n_packets=0, n_bytes=0, idle_timeout=60, idle_age=0, priority=100,ip,nw_dst=10.0.0.50 actions=output:50
+ cookie=0x0, duration=0.313s, table=0, n_packets=0, n_bytes=0, idle_timeout=60, idle_age=0, priority=100,arp,arp_tpa=10.0.0.50 actions=output:50
+ cookie=0x0, duration=0.311s, table=0, n_packets=0, n_bytes=0, idle_timeout=60, idle_age=0, priority=100,ip,nw_dst=10.0.0.51 actions=output:51
+ cookie=0x0, duration=0.310s, table=0, n_packets=0, n_bytes=0, idle_timeout=60, idle_age=0, priority=100,arp,arp_tpa=10.0.0.51 actions=output:51
+ cookie=0x0, duration=0.308s, table=0, n_packets=0, n_bytes=0, idle_timeout=60, idle_age=0, priority=100,ip,nw_dst=10.0.0.52 actions=output:52
+ cookie=0x0, duration=0.307s, table=0, n_packets=0, n_bytes=0, idle_timeout=60, idle_age=0, priority=100,arp,arp_tpa=10.0.0.52 actions=output:52
+ cookie=0x0, duration=0.282s, table=0, n_packets=0, n_bytes=0, idle_timeout=60, idle_age=0, priority=100,ip,nw_dst=10.0.0.53 actions=output:53
+ cookie=0x0, duration=0.281s, table=0, n_packets=0, n_bytes=0, idle_timeout=60, idle_age=0, priority=100,arp,arp_tpa=10.0.0.53 actions=output:53
+ cookie=0x0, duration=0.279s, table=0, n_packets=0, n_bytes=0, idle_timeout=60, idle_age=0, priority=100,ip,nw_dst=10.0.0.54 actions=output:54
+ cookie=0x0, duration=0.278s, table=0, n_packets=0, n_bytes=0, idle_timeout=60, idle_age=0, priority=100,arp,arp_tpa=10.0.0.54 actions=output:54
+ cookie=0x0, duration=0.276s, table=0, n_packets=0, n_bytes=0, idle_timeout=60, idle_age=0, priority=100,ip,nw_dst=10.0.0.55 actions=output:55
+ cookie=0x0, duration=0.274s, table=0, n_packets=0, n_bytes=0, idle_timeout=60, idle_age=0, priority=100,arp,arp_tpa=10.0.0.55 actions=output:55
+ cookie=0x0, duration=0.250s, table=0, n_packets=0, n_bytes=0, idle_timeout=60, idle_age=0, priority=100,ip,nw_dst=10.0.0.56 actions=output:56
+ cookie=0x0, duration=0.248s, table=0, n_packets=0, n_bytes=0, idle_timeout=60, idle_age=0, priority=100,arp,arp_tpa=10.0.0.56 actions=output:56
+ cookie=0x0, duration=0.247s, table=0, n_packets=0, n_bytes=0, idle_timeout=60, idle_age=0, priority=100,ip,nw_dst=10.0.0.57 actions=output:57
+ cookie=0x0, duration=0.244s, table=0, n_packets=0, n_bytes=0, idle_timeout=60, idle_age=0, priority=100,arp,arp_tpa=10.0.0.57 actions=output:57
+ cookie=0x0, duration=0.243s, table=0, n_packets=0, n_bytes=0, idle_timeout=60, idle_age=0, priority=100,ip,nw_dst=10.0.0.58 actions=output:58
+ cookie=0x0, duration=0.229s, table=0, n_packets=0, n_bytes=0, idle_timeout=60, idle_age=0, priority=100,arp,arp_tpa=10.0.0.58 actions=output:58
+ cookie=0x0, duration=0.227s, table=0, n_packets=0, n_bytes=0, idle_timeout=60, idle_age=0, priority=100,ip,nw_dst=10.0.0.59 actions=output:59
+ cookie=0x0, duration=0.225s, table=0, n_packets=0, n_bytes=0, idle_timeout=60, idle_age=0, priority=100,arp,arp_tpa=10.0.0.59 actions=output:59
+ cookie=0x0, duration=0.224s, table=0, n_packets=0, n_bytes=0, idle_timeout=60, idle_age=0, priority=100,ip,nw_dst=10.0.0.60 actions=output:60
+ cookie=0x0, duration=0.222s, table=0, n_packets=0, n_bytes=0, idle_timeout=60, idle_age=0, priority=100,arp,arp_tpa=10.0.0.60 actions=output:60
+ cookie=0x0, duration=0.221s, table=0, n_packets=0, n_bytes=0, idle_timeout=60, idle_age=0, priority=100,ip,nw_dst=10.0.0.61 actions=output:61
+ cookie=0x0, duration=0.219s, table=0, n_packets=0, n_bytes=0, idle_timeout=60, idle_age=0, priority=100,arp,arp_tpa=10.0.0.61 actions=output:61
+ cookie=0x0, duration=0.217s, table=0, n_packets=0, n_bytes=0, idle_timeout=60, idle_age=0, priority=100,ip,nw_dst=10.0.0.62 actions=output:62
+ cookie=0x0, duration=0.216s, table=0, n_packets=0, n_bytes=0, idle_timeout=60, idle_age=0, priority=100,arp,arp_tpa=10.0.0.62 actions=output:62
+ cookie=0x0, duration=0.214s, table=0, n_packets=0, n_bytes=0, idle_timeout=60, idle_age=0, priority=100,ip,nw_dst=10.0.0.63 actions=output:63
+ cookie=0x0, duration=0.213s, table=0, n_packets=0, n_bytes=0, idle_timeout=60, idle_age=0, priority=100,arp,arp_tpa=10.0.0.63 actions=output:63
+ cookie=0x0, duration=0.211s, table=0, n_packets=0, n_bytes=0, idle_timeout=60, idle_age=0, priority=100,ip,nw_dst=10.0.0.64 actions=output:64
+ cookie=0x0, duration=0.196s, table=0, n_packets=0, n_bytes=0, idle_timeout=60, idle_age=0, priority=100,arp,arp_tpa=10.0.0.64 actions=output:64
+ cookie=0x0, duration=0.195s, table=0, n_packets=0, n_bytes=0, idle_timeout=60, idle_age=0, priority=100,ip,nw_dst=10.0.0.65 actions=output:65
+ cookie=0x0, duration=0.193s, table=0, n_packets=0, n_bytes=0, idle_timeout=60, idle_age=0, priority=100,arp,arp_tpa=10.0.0.65 actions=output:65
+ cookie=0x0, duration=0.192s, table=0, n_packets=0, n_bytes=0, idle_timeout=60, idle_age=0, priority=100,ip,nw_dst=10.0.0.66 actions=output:66
+ cookie=0x0, duration=0.190s, table=0, n_packets=0, n_bytes=0, idle_timeout=60, idle_age=0, priority=100,arp,arp_tpa=10.0.0.66 actions=output:66
+ cookie=0x0, duration=0.188s, table=0, n_packets=0, n_bytes=0, idle_timeout=60, idle_age=0, priority=100,ip,nw_dst=10.0.0.67 actions=output:67
+ cookie=0x0, duration=0.187s, table=0, n_packets=0, n_bytes=0, idle_timeout=60, idle_age=0, priority=100,arp,arp_tpa=10.0.0.67 actions=output:67
+ cookie=0x0, duration=0.185s, table=0, n_packets=0, n_bytes=0, idle_timeout=60, idle_age=0, priority=100,ip,nw_dst=10.0.0.68 actions=output:68
+ cookie=0x0, duration=0.184s, table=0, n_packets=0, n_bytes=0, idle_timeout=60, idle_age=0, priority=100,arp,arp_tpa=10.0.0.68 actions=output:68
+ cookie=0x0, duration=0.182s, table=0, n_packets=0, n_bytes=0, idle_timeout=60, idle_age=0, priority=100,ip,nw_dst=10.0.0.69 actions=output:69
+ cookie=0x0, duration=0.180s, table=0, n_packets=0, n_bytes=0, idle_timeout=60, idle_age=0, priority=100,arp,arp_tpa=10.0.0.69 actions=output:69
+ cookie=0x0, duration=0.179s, table=0, n_packets=0, n_bytes=0, idle_timeout=60, idle_age=0, priority=100,ip,nw_dst=10.0.0.70 actions=output:70
+ cookie=0x0, duration=0.177s, table=0, n_packets=0, n_bytes=0, idle_timeout=60, idle_age=0, priority=100,arp,arp_tpa=10.0.0.70 actions=output:70
+ cookie=0x0, duration=0.176s, table=0, n_packets=0, n_bytes=0, idle_timeout=60, idle_age=0, priority=100,ip,nw_dst=10.0.0.71 actions=output:71
+ cookie=0x0, duration=0.150s, table=0, n_packets=0, n_bytes=0, idle_timeout=60, idle_age=0, priority=100,arp,arp_tpa=10.0.0.71 actions=output:71
+ cookie=0x0, duration=0.148s, table=0, n_packets=0, n_bytes=0, idle_timeout=60, idle_age=0, priority=100,ip,nw_dst=10.0.0.72 actions=output:72
+ cookie=0x0, duration=0.145s, table=0, n_packets=0, n_bytes=0, idle_timeout=60, idle_age=0, priority=100,arp,arp_tpa=10.0.0.72 actions=output:72
+ cookie=0x0, duration=0.144s, table=0, n_packets=0, n_bytes=0, idle_timeout=60, idle_age=0, priority=100,ip,nw_dst=10.0.0.73 actions=output:73
+ cookie=0x0, duration=0.142s, table=0, n_packets=0, n_bytes=0, idle_timeout=60, idle_age=0, priority=100,arp,arp_tpa=10.0.0.73 actions=output:73
+ cookie=0x0, duration=0.129s, table=0, n_packets=0, n_bytes=0, idle_timeout=60, idle_age=0, priority=100,ip,nw_dst=10.0.0.74 actions=output:74
+ cookie=0x0, duration=0.127s, table=0, n_packets=0, n_bytes=0, idle_timeout=60, idle_age=0, priority=100,arp,arp_tpa=10.0.0.74 actions=output:74
+ cookie=0x0, duration=0.126s, table=0, n_packets=0, n_bytes=0, idle_timeout=60, idle_age=0, priority=100,ip,nw_dst=10.0.0.75 actions=output:75
+ cookie=0x0, duration=0.124s, table=0, n_packets=0, n_bytes=0, idle_timeout=60, idle_age=0, priority=100,arp,arp_tpa=10.0.0.75 actions=output:75
+ cookie=0x0, duration=0.122s, table=0, n_packets=0, n_bytes=0, idle_timeout=60, idle_age=0, priority=100,ip,nw_dst=10.0.0.76 actions=output:76
+ cookie=0x0, duration=0.121s, table=0, n_packets=0, n_bytes=0, idle_timeout=60, idle_age=0, priority=100,arp,arp_tpa=10.0.0.76 actions=output:76
+ cookie=0x0, duration=0.119s, table=0, n_packets=0, n_bytes=0, idle_timeout=60, idle_age=0, priority=100,ip,nw_dst=10.0.0.77 actions=output:77
+ cookie=0x0, duration=0.118s, table=0, n_packets=0, n_bytes=0, idle_timeout=60, idle_age=0, priority=100,arp,arp_tpa=10.0.0.77 actions=output:77
+ cookie=0x0, duration=0.116s, table=0, n_packets=0, n_bytes=0, idle_timeout=60, idle_age=0, priority=100,ip,nw_dst=10.0.0.78 actions=output:78
+ cookie=0x0, duration=0.114s, table=0, n_packets=0, n_bytes=0, idle_timeout=60, idle_age=0, priority=100,arp,arp_tpa=10.0.0.78 actions=output:78
+ cookie=0x0, duration=0.095s, table=0, n_packets=0, n_bytes=0, idle_timeout=60, idle_age=0, priority=100,ip,nw_dst=10.0.0.79 actions=output:79
+ cookie=0x0, duration=0.093s, table=0, n_packets=0, n_bytes=0, idle_timeout=60, idle_age=0, priority=100,arp,arp_tpa=10.0.0.79 actions=output:79
+ cookie=0x0, duration=0.091s, table=0, n_packets=0, n_bytes=0, idle_timeout=60, idle_age=0, priority=100,ip,nw_dst=10.0.0.80 actions=output:80
+ cookie=0x0, duration=0.089s, table=0, n_packets=0, n_bytes=0, idle_timeout=60, idle_age=0, priority=100,arp,arp_tpa=10.0.0.80 actions=output:80
+ cookie=0x0, duration=0.088s, table=0, n_packets=0, n_bytes=0, idle_timeout=60, idle_age=0, priority=100,ip,nw_dst=10.0.0.81 actions=output:81
+ cookie=0x0, duration=0.086s, table=0, n_packets=0, n_bytes=0, idle_timeout=60, idle_age=0, priority=100,arp,arp_tpa=10.0.0.81 actions=output:81
+ cookie=0x0, duration=0.084s, table=0, n_packets=0, n_bytes=0, idle_timeout=60, idle_age=0, priority=100,ip,nw_dst=10.0.0.82 actions=output:82
+ cookie=0x0, duration=0.083s, table=0, n_packets=0, n_bytes=0, idle_timeout=60, idle_age=0, priority=100,arp,arp_tpa=10.0.0.82 actions=output:82
+ cookie=0x0, duration=0.057s, table=0, n_packets=0, n_bytes=0, idle_timeout=60, idle_age=0, priority=100,ip,nw_dst=10.0.0.83 actions=output:83
+ cookie=0x0, duration=0.055s, table=0, n_packets=0, n_bytes=0, idle_timeout=60, idle_age=0, priority=100,arp,arp_tpa=10.0.0.83 actions=output:83
+ cookie=0x0, duration=0.054s, table=0, n_packets=0, n_bytes=0, idle_timeout=60, idle_age=0, priority=100,ip,nw_dst=10.0.0.84 actions=output:84
+ cookie=0x0, duration=0.052s, table=0, n_packets=0, n_bytes=0, idle_timeout=60, idle_age=0, priority=100,arp,arp_tpa=10.0.0.84 actions=output:84
+ cookie=0x0, duration=0.051s, table=0, n_packets=0, n_bytes=0, idle_timeout=60, idle_age=0, priority=100,ip,nw_dst=10.0.0.85 actions=output:85
+ cookie=0x0, duration=0.049s, table=0, n_packets=0, n_bytes=0, idle_timeout=60, idle_age=0, priority=100,arp,arp_tpa=10.0.0.85 actions=output:85
+ cookie=0x0, duration=0.047s, table=0, n_packets=0, n_bytes=0, idle_timeout=60, idle_age=0, priority=100,ip,nw_dst=10.0.0.86 actions=output:86
+ cookie=0x0, duration=0.046s, table=0, n_packets=0, n_bytes=0, idle_timeout=60, idle_age=0, priority=100,arp,arp_tpa=10.0.0.86 actions=output:86
+ cookie=0x0, duration=0.044s, table=0, n_packets=0, n_bytes=0, idle_timeout=60, idle_age=0, priority=100,ip,nw_dst=10.0.0.87 actions=output:87
+ cookie=0x0, duration=0.043s, table=0, n_packets=0, n_bytes=0, idle_timeout=60, idle_age=0, priority=100,arp,arp_tpa=10.0.0.87 actions=output:87
+ cookie=0x0, duration=0.041s, table=0, n_packets=0, n_bytes=0, idle_timeout=60, idle_age=0, priority=100,ip,nw_dst=10.0.0.88 actions=output:88
+ cookie=0x0, duration=0.039s, table=0, n_packets=0, n_bytes=0, idle_timeout=60, idle_age=0, priority=100,arp,arp_tpa=10.0.0.88 actions=output:88
+ cookie=0x0, duration=0.038s, table=0, n_packets=0, n_bytes=0, idle_timeout=60, idle_age=0, priority=100,ip,nw_dst=10.0.0.89 actions=output:89
+ cookie=0x0, duration=0.036s, table=0, n_packets=0, n_bytes=0, idle_timeout=60, idle_age=0, priority=100,arp,arp_tpa=10.0.0.89 actions=output:89
+ cookie=0x0, duration=0.034s, table=0, n_packets=0, n_bytes=0, idle_timeout=60, idle_age=0, priority=100,ip,nw_dst=10.0.0.90 actions=output:90
+ cookie=0x0, duration=0.033s, table=0, n_packets=0, n_bytes=0, idle_timeout=60, idle_age=0, priority=100,arp,arp_tpa=10.0.0.90 actions=output:90
+ cookie=0x0, duration=0.031s, table=0, n_packets=0, n_bytes=0, idle_timeout=60, idle_age=0, priority=100,ip,nw_dst=10.0.0.91 actions=output:91
+ cookie=0x0, duration=0.030s, table=0, n_packets=0, n_bytes=0, idle_timeout=60, idle_age=0, priority=100,arp,arp_tpa=10.0.0.91 actions=output:91
+ cookie=0x0, duration=0.028s, table=0, n_packets=0, n_bytes=0, idle_timeout=60, idle_age=0, priority=100,ip,nw_dst=10.0.0.92 actions=output:92
+ cookie=0x0, duration=0.027s, table=0, n_packets=0, n_bytes=0, idle_timeout=60, idle_age=0, priority=100,arp,arp_tpa=10.0.0.92 actions=output:92
+ cookie=0x0, duration=0.025s, table=0, n_packets=0, n_bytes=0, idle_timeout=60, idle_age=0, priority=100,ip,nw_dst=10.0.0.93 actions=output:93
+ cookie=0x0, duration=0.024s, table=0, n_packets=0, n_bytes=0, idle_timeout=60, idle_age=0, priority=100,arp,arp_tpa=10.0.0.93 actions=output:93
+ cookie=0x0, duration=0.022s, table=0, n_packets=0, n_bytes=0, idle_timeout=60, idle_age=0, priority=100,ip,nw_dst=10.0.0.94 actions=output:94
+ cookie=0x0, duration=0.021s, table=0, n_packets=0, n_bytes=0, idle_timeout=60, idle_age=0, priority=100,arp,arp_tpa=10.0.0.94 actions=output:94
+ cookie=0x0, duration=0.019s, table=0, n_packets=0, n_bytes=0, idle_timeout=60, idle_age=0, priority=100,ip,nw_dst=10.0.0.95 actions=output:95
+ cookie=0x0, duration=0.017s, table=0, n_packets=0, n_bytes=0, idle_timeout=60, idle_age=0, priority=100,arp,arp_tpa=10.0.0.95 actions=output:95
+ cookie=0x0, duration=0.016s, table=0, n_packets=0, n_bytes=0, idle_timeout=60, idle_age=0, priority=100,ip,nw_dst=10.0.0.96 actions=output:96
+ cookie=0x0, duration=0.014s, table=0, n_packets=0, n_bytes=0, idle_timeout=60, idle_age=0, priority=100,arp,arp_tpa=10.0.0.96 actions=output:96
+ cookie=0x0, duration=0.013s, table=0, n_packets=0, n_bytes=0, idle_timeout=60, idle_age=0, priority=100,ip,nw_dst=10.0.0.97 actions=output:97
+ cookie=0x0, duration=0.011s, table=0, n_packets=0, n_bytes=0, idle_timeout=60, idle_age=0, priority=100,arp,arp_tpa=10.0.0.97 actions=output:97
+ cookie=0x0, duration=0.010s, table=0, n_packets=0, n_bytes=0, idle_timeout=60, idle_age=0, priority=100,ip,nw_dst=10.0.0.98 actions=output:98
+ cookie=0x0, duration=0.008s, table=0, n_packets=0, n_bytes=0, idle_timeout=60, idle_age=0, priority=100,arp,arp_tpa=10.0.0.98 actions=output:98
+ cookie=0x0, duration=0.007s, table=0, n_packets=0, n_bytes=0, idle_timeout=60, idle_age=0, priority=100,ip,nw_dst=10.0.0.99 actions=output:99
+ cookie=0x0, duration=0.005s, table=0, n_packets=0, n_bytes=0, idle_timeout=60, idle_age=0, priority=100,arp,arp_tpa=10.0.0.99 actions=output:99
+ cookie=0x0, duration=0.003s, table=0, n_packets=0, n_bytes=0, idle_timeout=60, idle_age=0, priority=100,ip,nw_dst=10.0.0.100 actions=output:100
+ cookie=0x0, duration=0.001s, table=0, n_packets=0, n_bytes=0, idle_timeout=60, idle_age=0, priority=100,arp,arp_tpa=10.0.0.100 actions=output:100
+ovs-ofctl add-flow s0 table=0,idle_timeout=60,priority=100,dl_type=0x0800,nw_dst=10.0.0.71,actions=output:"s0-eth71"
+ovs-ofctl add-flow s0 table=0,idle_timeout=60,priority=100,dl_type=0x0806,nw_dst=10.0.0.71,actions=output:"s0-eth71"
+ovs-ofctl add-flow s0 table=0,idle_timeout=60,priority=100,dl_type=0x0800,nw_dst=10.0.0.72,actions=output:"s0-eth72"
+ovs-ofctl add-flow s0 table=0,idle_timeout=60,priority=100,dl_type=0x0806,nw_dst=10.0.0.72,actions=output:"s0-eth72"
+ovs-ofctl add-flow s0 table=0,idle_timeout=60,priority=100,dl_type=0x0800,nw_dst=10.0.0.73,actions=output:"s0-eth73"
+ovs-ofctl add-flow s0 table=0,idle_timeout=60,priority=100,dl_type=0x0806,nw_dst=10.0.0.73,actions=output:"s0-eth73"
+ovs-ofctl add-flow s0 table=0,idle_timeout=60,priority=100,dl_type=0x0800,nw_dst=10.0.0.74,actions=output:"s0-eth74"
+ovs-ofctl add-flow s0 table=0,idle_timeout=60,priority=100,dl_type=0x0806,nw_dst=10.0.0.74,actions=output:"s0-eth74"
+ovs-ofctl add-flow s0 table=0,idle_timeout=60,priority=100,dl_type=0x0800,nw_dst=10.0.0.75,actions=output:"s0-eth75"
+ovs-ofctl add-flow s0 table=0,idle_timeout=60,priority=100,dl_type=0x0806,nw_dst=10.0.0.75,actions=output:"s0-eth75"
+ovs-ofctl add-flow s0 table=0,idle_timeout=60,priority=100,dl_type=0x0800,nw_dst=10.0.0.76,actions=output:"s0-eth76"
+ovs-ofctl add-flow s0 table=0,idle_timeout=60,priority=100,dl_type=0x0806,nw_dst=10.0.0.76,actions=output:"s0-eth76"
+ovs-ofctl add-flow s0 table=0,idle_timeout=60,priority=100,dl_type=0x0800,nw_dst=10.0.0.77,actions=output:"s0-eth77"
+ovs-ofctl add-flow s0 table=0,idle_timeout=60,priority=100,dl_type=0x0806,nw_dst=10.0.0.77,actions=output:"s0-eth77"
+ovs-ofctl add-flow s0 table=0,idle_timeout=60,priority=100,dl_type=0x0800,nw_dst=10.0.0.78,actions=output:"s0-eth78"
+ovs-ofctl add-flow s0 table=0,idle_timeout=60,priority=100,dl_type=0x0806,nw_dst=10.0.0.78,actions=output:"s0-eth78"
+ovs-ofctl add-flow s0 table=0,idle_timeout=60,priority=100,dl_type=0x0800,nw_dst=10.0.0.79,actions=output:"s0-eth79"
+ovs-ofctl add-flow s0 table=0,idle_timeout=60,priority=100,dl_type=0x0806,nw_dst=10.0.0.79,actions=output:"s0-eth79"
+ovs-ofctl add-flow s0 table=0,idle_timeout=60,priority=100,dl_type=0x0800,nw_dst=10.0.0.80,actions=output:"s0-eth80"
+ovs-ofctl add-flow s0 table=0,idle_timeout=60,priority=100,dl_type=0x0806,nw_dst=10.0.0.80,actions=output:"s0-eth80"
+ovs-ofctl add-flow s0 table=0,idle_timeout=60,priority=100,dl_type=0x0800,nw_dst=10.0.0.81,actions=output:"s0-eth81"
+ovs-ofctl add-flow s0 table=0,idle_timeout=60,priority=100,dl_type=0x0806,nw_dst=10.0.0.81,actions=output:"s0-eth81"
+ovs-ofctl add-flow s0 table=0,idle_timeout=60,priority=100,dl_type=0x0800,nw_dst=10.0.0.82,actions=output:"s0-eth82"
+ovs-ofctl add-flow s0 table=0,idle_timeout=60,priority=100,dl_type=0x0806,nw_dst=10.0.0.82,actions=output:"s0-eth82"
+ovs-ofctl add-flow s0 table=0,idle_timeout=60,priority=100,dl_type=0x0800,nw_dst=10.0.0.83,actions=output:"s0-eth83"
+ovs-ofctl add-flow s0 table=0,idle_timeout=60,priority=100,dl_type=0x0806,nw_dst=10.0.0.83,actions=output:"s0-eth83"
+ovs-ofctl add-flow s0 table=0,idle_timeout=60,priority=100,dl_type=0x0800,nw_dst=10.0.0.84,actions=output:"s0-eth84"
+ovs-ofctl add-flow s0 table=0,idle_timeout=60,priority=100,dl_type=0x0806,nw_dst=10.0.0.84,actions=output:"s0-eth84"
+ovs-ofctl add-flow s0 table=0,idle_timeout=60,priority=100,dl_type=0x0800,nw_dst=10.0.0.85,actions=output:"s0-eth85"
+ovs-ofctl add-flow s0 table=0,idle_timeout=60,priority=100,dl_type=0x0806,nw_dst=10.0.0.85,actions=output:"s0-eth85"
+ovs-ofctl add-flow s0 table=0,idle_timeout=60,priority=100,dl_type=0x0800,nw_dst=10.0.0.86,actions=output:"s0-eth86"
+ovs-ofctl add-flow s0 table=0,idle_timeout=60,priority=100,dl_type=0x0806,nw_dst=10.0.0.86,actions=output:"s0-eth86"
+ovs-ofctl add-flow s0 table=0,idle_timeout=60,priority=100,dl_type=0x0800,nw_dst=10.0.0.87,actions=output:"s0-eth87"
+ovs-ofctl add-flow s0 table=0,idle_timeout=60,priority=100,dl_type=0x0806,nw_dst=10.0.0.87,actions=output:"s0-eth87"
+ovs-ofctl add-flow s0 table=0,idle_timeout=60,priority=100,dl_type=0x0800,nw_dst=10.0.0.88,actions=output:"s0-eth88"
+ovs-ofctl add-flow s0 table=0,idle_timeout=60,priority=100,dl_type=0x0806,nw_dst=10.0.0.88,actions=output:"s0-eth88"
+ovs-ofctl add-flow s0 table=0,idle_timeout=60,priority=100,dl_type=0x0800,nw_dst=10.0.0.89,actions=output:"s0-eth89"
+ovs-ofctl add-flow s0 table=0,idle_timeout=60,priority=100,dl_type=0x0806,nw_dst=10.0.0.89,actions=output:"s0-eth89"
+ovs-ofctl add-flow s0 table=0,idle_timeout=60,priority=100,dl_type=0x0800,nw_dst=10.0.0.90,actions=output:"s0-eth90"
+ovs-ofctl add-flow s0 table=0,idle_timeout=60,priority=100,dl_type=0x0806,nw_dst=10.0.0.90,actions=output:"s0-eth90"
+ovs-ofctl add-flow s0 table=0,idle_timeout=60,priority=100,dl_type=0x0800,nw_dst=10.0.0.91,actions=output:"s0-eth91"
+ovs-ofctl add-flow s0 table=0,idle_timeout=60,priority=100,dl_type=0x0806,nw_dst=10.0.0.91,actions=output:"s0-eth91"
+ovs-ofctl add-flow s0 table=0,idle_timeout=60,priority=100,dl_type=0x0800,nw_dst=10.0.0.92,actions=output:"s0-eth92"
+ovs-ofctl add-flow s0 table=0,idle_timeout=60,priority=100,dl_type=0x0806,nw_dst=10.0.0.92,actions=output:"s0-eth92"
+ovs-ofctl add-flow s0 table=0,idle_timeout=60,priority=100,dl_type=0x0800,nw_dst=10.0.0.93,actions=output:"s0-eth93"
+ovs-ofctl add-flow s0 table=0,idle_timeout=60,priority=100,dl_type=0x0806,nw_dst=10.0.0.93,actions=output:"s0-eth93"
+ovs-ofctl add-flow s0 table=0,idle_timeout=60,priority=100,dl_type=0x0800,nw_dst=10.0.0.94,actions=output:"s0-eth94"
+ovs-ofctl add-flow s0 table=0,idle_timeout=60,priority=100,dl_type=0x0806,nw_dst=10.0.0.94,actions=output:"s0-eth94"
+ovs-ofctl add-flow s0 table=0,idle_timeout=60,priority=100,dl_type=0x0800,nw_dst=10.0.0.95,actions=output:"s0-eth95"
+ovs-ofctl add-flow s0 table=0,idle_timeout=60,priority=100,dl_type=0x0806,nw_dst=10.0.0.95,actions=output:"s0-eth95"
+ovs-ofctl add-flow s0 table=0,idle_timeout=60,priority=100,dl_type=0x0800,nw_dst=10.0.0.96,actions=output:"s0-eth96"
+ovs-ofctl add-flow s0 table=0,idle_timeout=60,priority=100,dl_type=0x0806,nw_dst=10.0.0.96,actions=output:"s0-eth96"
+ovs-ofctl add-flow s0 table=0,idle_timeout=60,priority=100,dl_type=0x0800,nw_dst=10.0.0.97,actions=output:"s0-eth97"
+ovs-ofctl add-flow s0 table=0,idle_timeout=60,priority=100,dl_type=0x0806,nw_dst=10.0.0.97,actions=output:"s0-eth97"
+ovs-ofctl add-flow s0 table=0,idle_timeout=60,priority=100,dl_type=0x0800,nw_dst=10.0.0.98,actions=output:"s0-eth98"
+ovs-ofctl add-flow s0 table=0,idle_timeout=60,priority=100,dl_type=0x0806,nw_dst=10.0.0.98,actions=output:"s0-eth98"
+ovs-ofctl add-flow s0 table=0,idle_timeout=60,priority=100,dl_type=0x0800,nw_dst=10.0.0.99,actions=output:"s0-eth99"
+ovs-ofctl add-flow s0 table=0,idle_timeout=60,priority=100,dl_type=0x0806,nw_dst=10.0.0.99,actions=output:"s0-eth99"
+ovs-ofctl add-flow s0 table=0,idle_timeout=60,priority=100,dl_type=0x0800,nw_dst=10.0.0.100,actions=output:"s0-eth100"
+ovs-ofctl add-flow s0 table=0,idle_timeout=60,priority=100,dl_type=0x0806,nw_dst=10.0.0.100,actions=output:"s0-eth100"
 Dumping switch connections
 Setting up nodes
 Hello!
-2023/05/15 02:30:42 P0: Listening to 10.0.0.1:5001.
-Finished discovery! Received 31414 messages.
+2023/05/15 16:12:45 P0: Listening to 10.0.0.1:5001.
+Finished discovery! Received 2000 messages.
 
 Hello!
-2023/05/15 02:30:42 P1: Listening to 10.0.0.2:5002.
-Finished discovery! Received 20000 messages.
+2023/05/15 16:12:45 P1: Listening to 10.0.0.2:5002.
+Finished discovery! Received 2000 messages.
 
 Hello!
-2023/05/15 02:30:42 P2: Listening to 10.0.0.3:5003.
-Finished discovery! Received 20100 messages.
+2023/05/15 16:12:45 P2: Listening to 10.0.0.3:5003.
+Finished discovery! Received 1980 messages.
 
 Hello!
-2023/05/15 02:30:42 P3: Listening to 10.0.0.4:5004.
-Finished discovery! Received 20060 messages.
+2023/05/15 16:12:45 P3: Listening to 10.0.0.4:5004.
+Finished discovery! Received 2000 messages.
 
 Hello!
-2023/05/15 02:30:42 P4: Listening to 10.0.0.5:5005.
-Finished discovery! Received 14222 messages.
+2023/05/15 16:12:45 P4: Listening to 10.0.0.5:5005.
+Finished discovery! Received 2000 messages.
+
+Hello!
+2023/05/15 16:12:45 P5: Listening to 10.0.0.6:5006.
+Finished discovery! Received 2000 messages.
+
+Hello!
+2023/05/15 16:12:45 P6: Listening to 10.0.0.7:5007.
+Finished discovery! Received 2000 messages.
+
+Hello!
+2023/05/15 16:12:45 P7: Listening to 10.0.0.8:5008.
+Finished discovery! Received 2000 messages.
+
+Hello!
+2023/05/15 16:12:45 P8: Listening to 10.0.0.9:5009.
+Finished discovery! Received 2000 messages.
+
+Hello!
+2023/05/15 16:12:45 P9: Listening to 10.0.0.10:5010.
+Finished discovery! Received 2000 messages.
+
+Hello!
+2023/05/15 16:12:45 P10: Listening to 10.0.0.11:5011.
+Finished discovery! Received 2000 messages.
+
+Hello!
+2023/05/15 16:12:45 P11: Listening to 10.0.0.12:5012.
+Finished discovery! Received 1980 messages.
+
+Hello!
+2023/05/15 16:12:45 P12: Listening to 10.0.0.13:5013.
+Finished discovery! Received 2000 messages.
+
+Hello!
+2023/05/15 16:12:45 P13: Listening to 10.0.0.14:5014.
+Finished discovery! Received 2000 messages.
+
+Hello!
+2023/05/15 16:12:45 P14: Listening to 10.0.0.15:5015.
+Finished discovery! Received 2000 messages.
+
+Hello!
+2023/05/15 16:12:45 P15: Listening to 10.0.0.16:5016.
+Finished discovery! Received 2000 messages.
+
+Hello!
+2023/05/15 16:12:45 P16: Listening to 10.0.0.17:5017.
+Finished discovery! Received 2000 messages.
+
+Hello!
+2023/05/15 16:12:45 P17: Listening to 10.0.0.18:5018.
+Finished discovery! Received 2000 messages.
+
+Hello!
+2023/05/15 16:12:45 P18: Listening to 10.0.0.19:5019.
+Finished discovery! Received 2000 messages.
+
+Hello!
+2023/05/15 16:12:45 P19: Listening to 10.0.0.20:5020.
+Finished discovery! Received 2000 messages.
+
+Hello!
+2023/05/15 16:12:45 P20: Listening to 10.0.0.21:5021.
+Finished discovery! Received 2000 messages.
+
+Hello!
+2023/05/15 16:12:45 P21: Listening to 10.0.0.22:5022.
+Finished discovery! Received 2000 messages.
+
+Hello!
+2023/05/15 16:12:45 P22: Listening to 10.0.0.23:5023.
+Finished discovery! Received 2000 messages.
+
+Hello!
+2023/05/15 16:12:45 P23: Listening to 10.0.0.24:5024.
+Finished discovery! Received 1920 messages.
+
+Hello!
+2023/05/15 16:12:45 P24: Listening to 10.0.0.25:5025.
+Finished discovery! Received 1990 messages.
+
+Hello!
+2023/05/15 16:12:45 P25: Listening to 10.0.0.26:5026.
+Finished discovery! Received 2000 messages.
+
+Hello!
+2023/05/15 16:12:45 P26: Listening to 10.0.0.27:5027.
+Finished discovery! Received 1960 messages.
+
+Hello!
+2023/05/15 16:12:45 P27: Listening to 10.0.0.28:5028.
+Finished discovery! Received 2000 messages.
+
+Hello!
+2023/05/15 16:12:45 P28: Listening to 10.0.0.29:5029.
+Finished discovery! Received 2000 messages.
+
+Hello!
+2023/05/15 16:12:45 P29: Listening to 10.0.0.30:5030.
+Finished discovery! Received 1999 messages.
+
+Hello!
+2023/05/15 16:12:45 P30: Listening to 10.0.0.31:5031.
+Finished discovery! Received 2000 messages.
+
+Hello!
+2023/05/15 16:12:45 P31: Listening to 10.0.0.32:5032.
+Finished discovery! Received 2000 messages.
+
+Hello!
+2023/05/15 16:12:45 P32: Listening to 10.0.0.33:5033.
+Finished discovery! Received 1960 messages.
+
+Hello!
+2023/05/15 16:12:45 P33: Listening to 10.0.0.34:5034.
+Finished discovery! Received 2000 messages.
+
+Hello!
+2023/05/15 16:12:45 P34: Listening to 10.0.0.35:5035.
+Finished discovery! Received 2000 messages.
+
+Hello!
+2023/05/15 16:12:45 P35: Listening to 10.0.0.36:5036.
+Finished discovery! Received 2000 messages.
+
+Hello!
+2023/05/15 16:12:45 P36: Listening to 10.0.0.37:5037.
+Finished discovery! Received 2000 messages.
+
+Hello!
+2023/05/15 16:12:45 P37: Listening to 10.0.0.38:5038.
+Finished discovery! Received 2000 messages.
+
+Hello!
+2023/05/15 16:12:45 P38: Listening to 10.0.0.39:5039.
+Finished discovery! Received 2000 messages.
+
+Hello!
+2023/05/15 16:12:45 P39: Listening to 10.0.0.40:5040.
+Finished discovery! Received 2000 messages.
+
+Hello!
+2023/05/15 16:12:45 P40: Listening to 10.0.0.41:5041.
+Finished discovery! Received 2000 messages.
+
+Hello!
+2023/05/15 16:12:45 P41: Listening to 10.0.0.42:5042.
+Finished discovery! Received 2000 messages.
+
+Hello!
+2023/05/15 16:12:45 P42: Listening to 10.0.0.43:5043.
+Finished discovery! Received 2000 messages.
+
+Hello!
+2023/05/15 16:12:45 P43: Listening to 10.0.0.44:5044.
+Finished discovery! Received 2000 messages.
+
+Hello!
+2023/05/15 16:12:45 P44: Listening to 10.0.0.45:5045.
+Finished discovery! Received 2000 messages.
+
+Hello!
+2023/05/15 16:12:45 P45: Listening to 10.0.0.46:5046.
+Finished discovery! Received 2000 messages.
+
+Hello!
+2023/05/15 16:12:45 P46: Listening to 10.0.0.47:5047.
+Finished discovery! Received 2000 messages.
+
+Hello!
+2023/05/15 16:12:45 P47: Listening to 10.0.0.48:5048.
+Finished discovery! Received 2000 messages.
+
+Hello!
+2023/05/15 16:12:45 P48: Listening to 10.0.0.49:5049.
+Finished discovery! Received 2000 messages.
+
+Hello!
+2023/05/15 16:12:45 P49: Listening to 10.0.0.50:5050.
+Finished discovery! Received 1980 messages.
+
+Hello!
+2023/05/15 16:12:45 P50: Listening to 10.0.0.51:5051.
+Finished discovery! Received 2000 messages.
+
+Hello!
+2023/05/15 16:12:45 P51: Listening to 10.0.0.52:5052.
+Finished discovery! Received 2000 messages.
+
+Hello!
+2023/05/15 16:12:45 P52: Listening to 10.0.0.53:5053.
+Finished discovery! Received 2000 messages.
+
+Hello!
+2023/05/15 16:12:45 P53: Listening to 10.0.0.54:5054.
+Finished discovery! Received 1980 messages.
+
+Hello!
+2023/05/15 16:12:45 P54: Listening to 10.0.0.55:5055.
+Finished discovery! Received 2000 messages.
+
+Hello!
+2023/05/15 16:12:45 P55: Listening to 10.0.0.56:5056.
+Finished discovery! Received 2000 messages.
+
+Hello!
+2023/05/15 16:12:45 P56: Listening to 10.0.0.57:5057.
+Finished discovery! Received 1979 messages.
+
+Hello!
+2023/05/15 16:12:45 P57: Listening to 10.0.0.58:5058.
+Finished discovery! Received 1993 messages.
+
+Hello!
+2023/05/15 16:12:45 P58: Listening to 10.0.0.59:5059.
+Finished discovery! Received 1986 messages.
+
+Hello!
+2023/05/15 16:12:45 P59: Listening to 10.0.0.60:5060.
+Finished discovery! Received 2000 messages.
+
+Hello!
+2023/05/15 16:12:45 P60: Listening to 10.0.0.61:5061.
+Finished discovery! Received 2000 messages.
+
+Hello!
+2023/05/15 16:12:45 P61: Listening to 10.0.0.62:5062.
+Finished discovery! Received 1999 messages.
+
+Hello!
+2023/05/15 16:12:45 P62: Listening to 10.0.0.63:5063.
+Finished discovery! Received 2000 messages.
+
+Hello!
+2023/05/15 16:12:45 P63: Listening to 10.0.0.64:5064.
+Finished discovery! Received 1999 messages.
+
+Hello!
+2023/05/15 16:12:45 P64: Listening to 10.0.0.65:5065.
+Finished discovery! Received 2000 messages.
+
+Hello!
+2023/05/15 16:12:45 P65: Listening to 10.0.0.66:5066.
+Finished discovery! Received 1999 messages.
+
+Hello!
+2023/05/15 16:12:45 P66: Listening to 10.0.0.67:5067.
+Finished discovery! Received 2000 messages.
+
+Hello!
+2023/05/15 16:12:45 P67: Listening to 10.0.0.68:5068.
+Finished discovery! Received 1979 messages.
+
+Hello!
+2023/05/15 16:12:45 P68: Listening to 10.0.0.69:5069.
+Finished discovery! Received 2000 messages.
+
+Hello!
+2023/05/15 16:12:45 P69: Listening to 10.0.0.70:5070.
+Finished discovery! Received 2000 messages.
+
+Hello!
+2023/05/15 16:12:45 P70: Listening to 10.0.0.71:5071.
+Finished discovery! Received 2000 messages.
+
+Hello!
+2023/05/15 16:12:45 P71: Listening to 10.0.0.72:5072.
+Finished discovery! Received 2000 messages.
+
+Hello!
+2023/05/15 16:12:45 P72: Listening to 10.0.0.73:5073.
+Finished discovery! Received 1960 messages.
+
+Hello!
+2023/05/15 16:12:45 P73: Listening to 10.0.0.74:5074.
+Finished discovery! Received 2000 messages.
+
+Hello!
+2023/05/15 16:12:45 P74: Listening to 10.0.0.75:5075.
+Finished discovery! Received 2000 messages.
+
+Hello!
+2023/05/15 16:12:45 P75: Listening to 10.0.0.76:5076.
+Finished discovery! Received 2000 messages.
+
+Hello!
+2023/05/15 16:12:45 P76: Listening to 10.0.0.77:5077.
+Finished discovery! Received 2000 messages.
+
+Hello!
+2023/05/15 16:12:45 P77: Listening to 10.0.0.78:5078.
+Finished discovery! Received 2000 messages.
+
+Hello!
+2023/05/15 16:12:45 P78: Listening to 10.0.0.79:5079.
+Finished discovery! Received 2000 messages.
+
+Hello!
+2023/05/15 16:12:45 P79: Listening to 10.0.0.80:5080.
+Finished discovery! Received 1939 messages.
+
+Hello!
+2023/05/15 16:12:45 P80: Listening to 10.0.0.81:5081.
+Finished discovery! Received 2000 messages.
+
+Hello!
+2023/05/15 16:12:45 P81: Listening to 10.0.0.82:5082.
+Finished discovery! Received 2000 messages.
+
+Hello!
+2023/05/15 16:12:45 P82: Listening to 10.0.0.83:5083.
+Finished discovery! Received 1920 messages.
+
+Hello!
+2023/05/15 16:12:45 P83: Listening to 10.0.0.84:5084.
+Finished discovery! Received 1980 messages.
+
+Hello!
+2023/05/15 16:12:45 P84: Listening to 10.0.0.85:5085.
+Finished discovery! Received 2000 messages.
+
+Hello!
+2023/05/15 16:12:45 P85: Listening to 10.0.0.86:5086.
+Finished discovery! Received 2000 messages.
+
+Hello!
+2023/05/15 16:12:45 P86: Listening to 10.0.0.87:5087.
+Finished discovery! Received 2000 messages.
+
+Hello!
+2023/05/15 16:12:45 P87: Listening to 10.0.0.88:5088.
+Finished discovery! Received 2000 messages.
+
+Hello!
+2023/05/15 16:12:45 P88: Listening to 10.0.0.89:5089.
+Finished discovery! Received 2000 messages.
+
+Hello!
+2023/05/15 16:12:45 P89: Listening to 10.0.0.90:5090.
+Finished discovery! Received 1904 messages.
+
+Hello!
+2023/05/15 16:12:45 P90: Listening to 10.0.0.91:5091.
+Finished discovery! Received 1992 messages.
+
+Hello!
+2023/05/15 16:12:45 P91: Listening to 10.0.0.92:5092.
+Finished discovery! Received 2000 messages.
+
+Hello!
+2023/05/15 16:12:45 P92: Listening to 10.0.0.93:5093.
+Finished discovery! Received 2000 messages.
+
+Hello!
+2023/05/15 16:12:45 P93: Listening to 10.0.0.94:5094.
+Finished discovery! Received 1982 messages.
+
+Hello!
+2023/05/15 16:12:45 P94: Listening to 10.0.0.95:5095.
+Finished discovery! Received 1981 messages.
+
+Hello!
+2023/05/15 16:12:45 P95: Listening to 10.0.0.96:5096.
+Finished discovery! Received 1980 messages.
+
+Hello!
+2023/05/15 16:12:45 P96: Listening to 10.0.0.97:5097.
+Finished discovery! Received 1979 messages.
+
+Hello!
+2023/05/15 16:12:45 P97: Listening to 10.0.0.98:5098.
+Finished discovery! Received 1961 messages.
+
+Hello!
+2023/05/15 16:12:45 P98: Listening to 10.0.0.99:5099.
+Finished discovery! Received 1942 messages.
+
+Hello!
+2023/05/15 16:12:45 P99: Listening to 10.0.0.100:5100.
+Finished discovery! Received 1900 messages.
 
 The end
